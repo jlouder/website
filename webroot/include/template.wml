@@ -1,63 +1,80 @@
 # $Id$
 # The WML template for all pages
 
+
 #include <tags.wml>
 #include <navbar.wml>
 
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<link rel="stylesheet" href="$(ROOT)/stylesheet.css" type="text/css">
+<link rel="stylesheet" href="$(ROOT)/stylesheet.css" type="text/css" />
 <title>{#TITLE#}</title>
 </head>
 
-<map name="topbarmap">
-  <area shape="rect" coords="36,42,198,76" alt="home" \
-        href="$(ROOT)" />
-  <area shape="rect" coords="213,45,260,70" alt="about" \
-        href="$(PERSONAL)" />
-  <area shape="rect" coords="277,46,336,70" alt="pictures" \
-        href="http://www.home.loudermilk.org/gallery/" />
-  <area shape="rect" coords="353,45,416,71" alt="software" \
-        href="$(SOFTWARE)/" />
-  <area shape="rect" coords="431,44,537,71" alt="charts" \
-        href="$(CHARTS)/" />
-  <area shape="rect" coords="553,45,634,70" alt="voice" \
-        href="$(VOICE)/" />
-  <area shape="rect" coords="650,45,705,70" alt="contact" \
-        href="$(ROOT)/contact.html" />
-</map>
-
 <body>
-<center>
-<table border="0" width="750" cellpadding="0" cellspacing="0">
-<tr>
-  <td colspan=4><img src="$(IMAGES)/topbar.gif" border=0 \
-                     usemap="#topbarmap"></td>
-</tr>
-<tr>
-  <td width="25"><img src="$(IMAGES)/navbar_left.gif" width="25" height="25"></td>
-  <td width="1" bgcolor="#e1e1e4"><img src="$(IMAGES)/1px.gif"></td>
-  <td class="navbar"><table border="0" width="100%" class="navbar">
-      <tr><navbar /></tr>
-    </table>
-  <td width="35"><img src="$(IMAGES)/navbar_right.gif" width="35" height="25"></td>
-</tr>
+<div id="container">
 
-<tr>
-  <td></td>
-  <td width="1" bgcolor="#e1e1e4"></td>
-  <td width="689"><div class="content">
+  <div id="pageHeader">
+    <h1><span>loudermilk.org</span></h1>
+  </div>
+
+  <div id="text">
 <!-- END HEADER -->
-<br />
 {#BODY#}
 <!-- BEGIN FOOTER -->
-<br />
-<br />
-</p></td>
-  <td></td>
-</tr>
-</table>
-</center>
+  <br />
+
+  </div>
+
+  <div id="navigation">
+    <h2><span>Navigation</span></h2>
+
+    <div class="navbox" <ifeq "$(topic)" "about" id="selected"> >
+      <h3><a href="$(PERSONAL)/">About</a></h3>
+      <ul>
+        <li><a href="$(PERSONAL)/aboutme.html">About me</a></li>
+        <li><a href="$(ROOT)/genealogy/">Genealogy</a></li>
+      </ul>
+    </div>
+
+    <div class="navbox">
+      <h3><a href="http://www.home.loudermilk.org/gallery/">Pictures</a></h3>
+    </div>
+
+    <div class="navbox" <ifeq "$(topic)" "software" id="selected"> >
+      <h3><a href="$(SOFTWARE)/">Software</a></h3>
+      <ul>
+        <li><a href="http://www.home.loudermilk.org/giftreg/">Gift wishlists</a></li>
+        <li><a href="$(SOFTWARE)/backups.html">Backups</a></li>
+        <li><a href="$(SOFTWARE)/smt.html">smt</a></li>
+        <li><a href="$(SOFTWARE)/website.html">Web site</a></li>
+      </ul>
+    </div>
+
+    <div class="navbox" <ifeq "$(topic)" "charts" id="selected"> >
+      <h3><a href="$(CHARTS)/">Charts &amp; Graphs</a></h3>
+      <ul>
+        <li><a href="$(CHARTS)/blockedmail.html">Spam</a></li>
+        <li><a href="$(CHARTS)/blockedports.html">Firewall</a></li>
+        <li><a href="http://www.loudermilk.org/stats/stats.html">Web site stats</a></li>
+        <li><a href="http://www.home.loudermilk.org/cgi-bin/nut/upsstats.cgi&amp;host=apcsu700@spoonman&amp;use_celsius=0">UPS</a></li>
+        <li><a href="http://www.loudermilk.org/seti/">SETI@home</a></li>
+        <li><a href="http://www.home.loudermilk.org/mrtg/rhinosaur_eth1.html">Cable modem</a></li>
+        <li><a href="http://www.home.loudermilk.org/mrtg/rhinosaur_eth2.html">Wireless LAN</a></li>
+      </ul>
+    </div>
+
+    <div class="navbox">
+      <h3><a href="$(ROOT)/voice/">Voice overs</a></h3>
+    </div>
+
+    <div class="navbox" <ifeq "$(topic)" "contact" id="selected"> >
+      <h3><a href="$(ROOT)/contact.html">Contact me</a></h3>
+    </div>
+  </div>
+</div>
 </body>
 </html>
 

@@ -3,11 +3,13 @@
 
 <title "Joel's software">
 
+<heading>Software</heading>
+                                                                                                   
 <p>I don't sit around all day writing software, but over the years I have
 produced a few moderately useful things.</p>
 
-<heading><a href="http://www.home.loudermilk.org/giftreg/">Gift Wishlists</a>\
-</heading>
+<h3><a href="http://www.home.loudermilk.org/giftreg/">Gift wishlists</a>\
+</h3>
 
 <p>Everyone always says I'm tough to buy for, so I wrote a web application to
 list things I want. Folks could then look there, buy something, and check it
@@ -24,17 +26,13 @@ code</a> is available, too.</p>
 <p>This application will allow anyone to list and track gifts they'd like,
 so feel free to use it yourself.</p>
 
-<br />
-
-<heading><a href="backups.html">backups</a></heading>
+<h3><a href="backups.html">Backups</a></h3>
 
 <p>No system administrator's life is complete without constructing a backup
 script. My backups are made to a large disk, and are bzipped tarfiles
 made from remote systems using ssh.</p>
 
-<br />
-
-<heading><a href="smt.html">smt</a></heading>
+<h3><a href="smt.html">smt</a></h3>
 
 <p>SMT is a service monitoring tool. Its purpose is to continually monitor
 any number of services and notify you if they become unavailable. SMT comes
@@ -45,24 +43,7 @@ at the same time, you'll get one notification that ten things happened,
 instead of ten notifications that one thing happened. This is particularly
 useful if your notifications go to a pager or mobile phone.</p>
 
-<br />
-
-<heading><a href="http://clockwork.sourceforge.net/">Clockwork</a></heading>
-
-<p>Clockwork is a project I've started (but not done much more with) to
-build an open-source enterprise job scheduler for UNIX systems. This project
-is intended to be something like CA's
-<a href="http://www3.ca.com/Solutions/Product.asp?ID=253">AutoSys</a>,
-which is nice, but has some serious scalability problems.</p>
-
-<p>I think there's a lack of free medium-to-large scale management tools.
-Another area that's lacking is something like
-<a href="http://www.openview.hp.com/products/ovoux/">HP OpenView Operations</a>.
-But one thing at a time ... and I've hardly started on this.</p>
-
-<br />
-
-<heading><a href="website.html">web site</a></heading>
+<h3><a href="website.html">Web site</a></h3>
 
 <p>Okay, it's not really software, but this web site is built from source
 code using <a href="http://www.thewml.org/">Website Meta Language</a> (WML).

@@ -3,10 +3,14 @@
 
 <title "Joel's charts & graphs">
 
+<heading>Charts &amp; Graphs</heading>
+
+<h3>Charts &amp; Graphs! Arts &amp; Crafts!</h3>
+
 <p>Everyone likes charts and graphs. If not everyone, then at least me. Here
 are some of my favorites:</p>
 
-<heading><a href="blockedmail.html">Blocked mail</a></heading>
+<h3><a href="blockedmail.html">Blocked mail</a></h3>
 
 <p>To defend myself against spam, I use the stock sendmail anti-relaying rules,
 <a href="http://www.spamassassin.org/">SpamAssassin</a> (with the
@@ -16,47 +20,35 @@ and <a href="http://razor.sourceforge.net/">Vipul's Razor</a> enabled). The
 SpamAssassin checks don't reject mail, though -- they just tag it. This page
 shows how much mail was rejected or tagged as spam so far this week.</p>
 
-<br />
-
-<heading><a href="blockedports.html">Blocked ports</a></heading>
+<h3><a href="blockedports.html">Blocked ports</a></h3>
 
 <p>Here you can see which ports have been blocked most frequently at my
 firewall over the past 24 hours. This sometimes is an indicator of what
 worm or exploit is most popular right now -- it usually has the most people
 scanning for its port.</p>
 
-<br />
-
-<heading><a href="http://www.loudermilk.org/stats/stats.html">Web site stats</a></heading>
+<h3><a href="http://www.loudermilk.org/stats/stats.html">Web site stats</a></h3>
 
 <p>Take a look at just how few people visit this web site.</p>
 
-<br />
-
-<heading><a href="http://www.home.loudermilk.org/cgi-bin/nut/upsstats.cgi?\
-                  host=apcsu700@spoonman&use_celsius=0">UPS</a></heading>
+<h3><a href="http://www.home.loudermilk.org/cgi-bin/nut/upsstats.cgi?\
+                  host=apcsu700@spoonman&use_celsius=0">UPS</a></h3>
 
 <p>Check in on the UPS that provides battery backup power for my home
 systems.</p>
 
-<br />
-
-<heading><a href="http://www.loudermilk.org/seti/">SETI@home</a></heading>
+<h3><a href="http://www.loudermilk.org/seti/">SETI@home</a></h3>
 
 <p>See how well my team is searching for extraterrestrial life as part of
 the SETI@home project.</p>
 
-<br />
-
-<heading><a href="http://www.home.loudermilk.org/mrtg/rhinosaur_eth1.html">\
-         Cable modem</a></heading>
+<h3><a href="http://www.home.loudermilk.org/mrtg/rhinosaur_eth1.html">\
+         Cable modem</a></h3>
 
 <p>View graphs of the usage of my cable modem connection to the Internet.</p>
 
-<br />
-
-<heading><a href="http://www.home.loudermilk.org/mrtg/rhinosaur_eth2.html">\
-         Wireless network</a></heading>
+<h3><a href="http://www.home.loudermilk.org/mrtg/rhinosaur_eth2.html">\
+         Wireless network</a></h3>
 
 <p>I have a wireless network at home that doesn't get much use. These graphs
 will show you just how little use it gets.</p>

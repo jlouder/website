@@ -3,13 +3,15 @@
 
 <title "Joel's software: the web site">
 
-<heading>History</heading>
+<heading>Web site</heading>
 
-<p>It's been high time to retire the old site design (if you can call it
-a design) for quite some time. Years ago, someone told me about a program
+<h3>History</h3>
+
+<p>Years ago, someone told me about a program
 called <a href="http://www.thewml.org/">WML</a>, Website Meta Language. It's
 how a programmer would put a site together -- out of source files that get
-compiled into <tt>.html</tt> files.</p>
+compiled into <tt>.html</tt> files. I thought that would be an excellent
+way to build my web site.</p>
 
 <p>The problem is that it's hard to understand how to put a site together
 with WML. There's plenty of documentation on how to use WML, but in true
@@ -30,9 +32,7 @@ and better yet, the
 code</a> for their web site is available. Finally, there was something I could
 learn from.</p>
 
-<br />
-
-<heading>WML Features</heading>
+<h3>WML Features</h3>
 
 <p>There are tons and tons of WML features, and I'm only using a handful of
 them. But I've listed them here both to show how useful WML is and to
@@ -44,31 +44,27 @@ top of this page is the directive:
 
 <screen>#include &lt;template.wml&gt; topic="software"</screen>
 
-This puts the images at the top of the page, and setting the <tt>topic</tt>
-variable tells the template that the navigation bar should show all the
-choices for the software section. This eliminates typing redundant HTML
+This puts the image at the top of the page, and setting the <tt>topic</tt>
+variable tells the template that the navigation pane should highlight the
+software section. This eliminates typing redundant HTML
 on every page. Not to mention saving tons of time if you want to give the
 site a facelift.</p>
 
-<br />
-
 <p><b>Create your own tags.</b> I've defined a couple of tags to make
-writing pages easier. For example the box above that says "WML Features"
-looks neat, but it's a table-within-a-table HTML construct that would be messy
-to write every time. But all I write is:
+writing pages easier. For example, when I want to show something that's
+a piece of code or something like you'd see on a terminal, I put it in a
+yellow box. To save myself all the HTML associated with the box and
+the fixed-width font, I can just write:
 
-<screen>&lt;heading&gt;WML Features&lt;/heading&gt;</screen>
+<screen>&lt;screen&gt;Stuff you'd see on a screen&lt;/screen&gt;</screen>
 
-Another example is all the fixed-width text I'm using on this page, done
-with the <tt>&lt;screen&gt;</tt> tag. Not only do these tags save
+Not only do these tags save
 time when writing the pages, they make it trivial to change the look
 of the site. All these tags are defined in
 <tt><a href="http://www.home.loudermilk.org/cgi-bin/viewcvs.cgi/website/\
              webroot/include/tags.wml?rev=HEAD&\
              content-type=text/vnd.viewcvs-markup">tags.wml</a></tt>, if
 you'd like to have a look.</p>
-
-<br />
 
 <p><b>Auto-adjusted pathnames.</b> I like to put all my images in one
 directory, even though they're referenced by pages in several directories.
@@ -88,9 +84,7 @@ is in when it finds a reference to <tt><protect>$(IMAGES)</protect></tt>.
 So I can safely refer to the images directory from any place in the site,
 and I don't have to use an absolute URL.</p>
 
-<br />
-
-<heading>Building the Site</heading>
+<h3>Building the Site</h3>
 
 <p>So now that I've got a tree full of <tt>.wml</tt> files, how do I turn
 them all into <tt>.html</tt> files? I could just use <tt>make</tt>, but then
@@ -119,9 +113,7 @@ system to transfer any changes from the home system to the web server.
 have a shell account with SSH access, and allows me to compile and run
 anything I want on their systems.</p>
 
-<br />
-
-<heading>Source code</heading>
+<h3>Source code</h3>
 
 <p>If you'd like to see how the entire site fits together, take a look at
 <a href="http://www.home.loudermilk.org/cgi-bin/viewcvs.cgi/website/#dirlist">\

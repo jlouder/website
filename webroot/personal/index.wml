@@ -3,13 +3,13 @@
 
 <title "About Joel">
 
-<heading><a href="aboutme.html">About me</a></heading>
+<heading>About</heading>
+
+<h3><a href="aboutme.html">About me</a></h3>
 
 <p>Some information about me. That <i>is</i> why you came here, right?</p>
 
-<br />
-
-<heading><a href="$(ROOT)/genealogy/">Genealogy</a></heading>
+<h3><a href="$(ROOT)/genealogy/">Genealogy</a></h3>
 
 <p>I'm collecting genealogical information about my family (and also my
 wife's family) and making it available on the web. I'm not much of a

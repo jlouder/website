@@ -5,6 +5,8 @@
 
 <heading>About me</heading>
 
+<h3>A brief history of Joel</h3>
+
 <p>I'm currently employed as a UNIX Systems Administrator for
 <a href="http://www.fedex.com/">FedEx</a> in Orlando, Florida. Actually,
 IT, Sales, and Marketing are part of a separate company called FedEx Services,
@@ -27,9 +29,7 @@ pictures</a> online. Michele now works in Lake Mary for
 <a href="http://www.wellsfargo.com/mortgage/">Wells Fargo Home
 Mortgage</a>.</p>
 
-<br />
-
-<heading>Family</heading>
+<h3>Family</h3>
 
 <p>All of my immediate family live in the central Florida area. I grew up
 in <a href="http://www.lakeland.net/">Lakeland</a>, which is in between
@@ -43,9 +43,7 @@ lives in Orlando, where she works as a Group Sales Coordinator for
 <a href="http://www.wetnwild.com/Orlando/Main/Main.asp">Wet 'n Wild</a>, a
 water park.</p>
 
-<br />
-
-<heading>Friends</heading>
+<h3>Friends</h3>
 
 <p>Here are links to some of my friends who have web sites of their own.</p>
 

@@ -1,69 +1,182 @@
 /* $Id$ */
 
-body
-{
-  background: #5d5d54;
-  margin: 0;
+* {
+  padding:    0;
+  margin:     0;
+}
+                                                                                
+body {
+  background:   #bebcad;
+  text-align:   center;
+  font-size:    0.8em;
+  font-family:  "Lucida Grande", Verdana, "Bitstream Vera Sans", "Luxi Sans",
+                Lucida, Geneva, Arial, Helvetica, sans-serif;
+}
+                                                                                
+p, h2, h3, dt, dd {
+  color:      #26221a;
+  padding:    0.4em;
+}
+
+h3 a, h3 a:visited {
+  color:      #26221a;
+}
+                                                                                
+h2 {
+  text-indent: 2em;
+  padding: .2em;
+}
+                                                                                
+h3 {
+  padding-top: 1em;
+}
+
+dd {
+  padding-left: 1.5em;
+}
+
+a {
+  color: #0000ff;
+}
+
+a:visited {
+  color: #8000ff;
+}
+                                                                                
+.line {
+  background: #ececea url(images/hr.gif) no-repeat center bottom;
+  margin: auto;
+  height: 1px;
+}
+                                                                                
+.line hr {
+  display: none;
+}
+                                                                                
+li {
+  color:      #26221a;
+}
+                                                                                
+.codeblock {
+  display: block;
+  margin: 1em;
+  border: 1px solid #26221a;
+  padding: 1em;
+  background: #ffffcc;
+  color: #26221a;
+  font-size: 1.0em;
+}
+                                                                                
+#container {
+  width:      800px;
+  margin-top: 0;
+  margin-left:  auto;
+  margin-right:  auto;
+  text-align: left;
+  background: url(images/container.gif) repeat-y center top;
+  position:   relative;
+}
+                                                                                
+#pageHeader h1 {
+  background: transparent url(images/header.jpg) no-repeat top left;
+  width:      800px;
+  height:     180px;
+}
+                                                                                
+#pageHeader h1 span {
+  display:    none;
+}
+                                                                                
+div #text {
+  margin-top:     5px;
+  margin-left:    15px;
+  margin-right:  165px;
+  height:        500px;	// for IE, reset later for non-IE
+}
+
+div[id] #text {
+  height:        auto;
+  min-height:    500px;
+}
+
+#text ul, #text ol {
+  margin-left:  2.5em;
+  padding-left: 0;
+}
+                                                                                
+#navigation {
+  position:   absolute;
+  top:        180px;
+  right:      20px;
+  width:      130px;
+  margin-top: 10px;
+}
+                                                                                
+#navigation h2 {
+  padding:    0;
+}
+
+                                                                                
+#navigation h2 span {
+  display:    none;
+}
+
+#navigation h2 {
+  display:  none;
+}
+                                                                                
+.navbox {
+  background:   #bcac85;
+  list-style:   none;
+  padding:       3px;
+  margin-bottom:  4px;
+  border: 1px solid #bcac85;
+}
+                                                                                
+.navbox h3 {
+  font-size:  11pt;
   padding: 0;
-  font-family: Arial, Helvetica, sans serif;
-  font-size: 10pt;
-  color: #ffffcc;
 }
-
-td
-{
-  font-size: 10pt;
-}
-
-a:link
-{
-  color: #ffffcc;
+                                                                                
+.navbox h3 a {
   font-weight: bold;
+  color:        #61593f;
+  text-decoration: none;
+  padding: 0;
 }
-
-a:visited
-{
-  color: #ffffcc;
+                                                                                
+.navbox h3 a:visited {
+  color:        #61593f;
+  padding: 0;
+}
+                                                                                
+.navbox h3 a:hover {
   font-weight: bold;
+  color:        white;
+  text-decoration: underline;
+  padding: 0;
 }
 
-.navbar
-{
-  font-size: 10pt;
-  text-align: center;
-  background-color: #303c0c;
+.navbox ul {
+  list-style: none;
 }
-
-.content
-{
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 5px;
-  margin-right: 5px;
-  font-size: 10pt;
+                                                                                
+#selected.navbox {
+  border: 1px solid #26221a;
 }
-
-.boxtext
-{
-  font-family: Georgia, Times New Roman, serif;
-  font-size: 14pt;
-  font-weight: bold;
-  color: #1d1d44;
+                                                                                
+#navigation li {
+  font-size: 90%;
+  color: #26221a;
+  font-weight: normal;
 }
-
-.screentext
-{
-  font-size: 10pt;
-  font-family: Courier New, Courier;
-  color: #1d1d44;
+                                                                                
+#navigation li a {
+  text-decoration: none;
+  color: #26221a;
 }
-
-span.boxtext a:link
-{
-  color: #1d1d44;
-}
-
-span.boxtext a:visited
-{
-  color: #1d1d44;
+                                                                                
+#navigation li a:hover {
+  text-decoration: underline;
+  color: #26221a;
 }

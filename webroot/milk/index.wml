@@ -1,7 +1,11 @@
 # $Id$
-#include <template.wml>
+#include <template.wml> topic="about"
 
 <title "The milk bet">
+
+<heading>The Milk Bet</heading>
+
+<h3>Background</h3>
 
 <p>There's an urban legend that says it's not possible to drink an entire
 gallon of milk in an hour. Some sources say it's because of a chemical in
@@ -11,6 +15,8 @@ Dvorak</a> took me up on my offer to pay him $20 if he could drink a gallon
 in an hour and keep it down for another hour. Shawn's terms: I must provide
 the gallon of milk, which must be skim, and some Oreos. We did this all at
 the office so everyone could enjoy.</p>
+
+<h3>The Contest</h3>
 
 <table border="0">
 <tr>
@@ -128,12 +134,10 @@ I lost my money, the entertainment for me and my coworkers was worth $20.</p>
 </tr>
 </table>
 
-<br />
+<h3>Shawn's Thoughts</h3>
 
-<table border="1" cellpadding="10" bgcolor="#ffffcc"
-       style="color: #000000">
-<tr>
-<td><img border="1" align="left" src="$(IMAGES)/milk8.jpg">
+<div style="background-color: #ffffcc; border: 1px solid black;">
+<img border="1" align="left" src="$(IMAGES)/milk8.jpg" style="margin: 0.5em;">
 <p>Minutes after vomiting (the first time), but having won the bet, Shawn
 recorded his thoughts on the experience:</p>
 
@@ -157,6 +161,4 @@ cheese).</p>
 it, or eat Oreos. It is possible to drink a gallon of milk and not hurl for
 an hour, but I think very few people could keep it down for good. DON'T TRY
 THIS AT HOME. If you are going to try, do it at someone else's home.</p>
-</td>
-</tr>
-</table>
+</div>

@@ -3,7 +3,9 @@
 
 <title "Joel's software: smt">
 
-<heading>Overview</heading>
+<heading>smt</heading>
+
+<h3>Overview</h3>
 
 <p>In 1999, Brian Hill and I wrote some software for a friend in return for
 being able to colocate a system at his home (he had a 64k leased line, which
@@ -30,16 +32,12 @@ you want.</li>
 </ul>
 </p>
 
-<br />
-
-<heading>Getting SMT</heading>
+<h3>Getting SMT</h3>
 
 <p>Download <a href="http://www1.doodlabs.com:81/smt/smt-1.05.tar.gz">version
 1.05 of SMT</a>.</p>
 
-<br />
-
-<heading>Documentation</heading>
+<h3>Documentation</h3>
 
 <p>For convenience, the <a href="smt.1.man.html">smt(1)</a> and
 <a href="smt-config.4.man.html">smt-config(4)</a> man pages are available

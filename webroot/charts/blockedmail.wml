@@ -1,9 +1,11 @@
 # $Id$
 #include <template.wml> topic="charts"
 
-<title "Joel's charts & graphs: blocked mail">
+<title "Joel's charts & graphs: Spam">
 
-<p>Everyone hates spam. I'm doing several things to cut down on spam:
+<heading>Spam</heading>
+
+<p>Everyone hates spam. I'm doing several things to cut down on spam:</p>
 <ul>
 <li>Using sendmail's anti-relaying rules. This doesn't cut down on my spam,
 but keeps spammers from using my system to send out more spam. I've noticed
@@ -29,7 +31,6 @@ is spam or not, they just report that they received that message. The DCC
 check tells me how many people have received that message before. If the
 number of recipients is very large, it's probably spam.</li>
 </ul>
-</p>
 
 <p>Here's a breakdown of how many of the messages my mail server has processed
 this week were rejected or tagged as spam:</p>

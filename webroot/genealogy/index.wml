@@ -3,7 +3,9 @@
 
 <title "Loudermilk Genealogy">
 
-<heading><a href="tree.cgi">Family tree</a></heading>
+<heading>Genealogy</heading>
+
+<h3><a href="tree.cgi">Family tree</a></h3>
 
 <p>Several years ago, my father did quite a bit of research into our
 genealogy. Some folks in my wife's family have done a lot of research, too.
@@ -29,9 +31,7 @@ data I don't yet have in the tree, please
 information. Or, if you'd like a portion of my raw data to add to your
 own tree, I can provide that.</p>
 
-<br />
-
-<heading>The software</heading>
+<h3>The software</h3>
 
 <p>There's software available to put family trees on the web, but I like to
 make my own so it works just the way I want. The tree is drawn by a

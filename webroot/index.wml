@@ -4,27 +4,15 @@
 
 <title "Joel's web site">
 
-<p>Good day, and welcome to my web site. Choose from one of the links above.</p>
+<p>Good day, and welcome to my web site. Choose from one of the links to the right.</p>
 
 <br />
 
-<div align="center">
-<table width="70%" border="0" cellspacing="0" cellpadding="1">
-  <tr>
-    <td bgcolor="#ffffff">
-      <table width="100%" border="0" cellspacing="0" cellpadding="20">
-        <tr>
-          <td bgcolor="#273c53">
-            <p align="center">
-              <b>What's new with Joel:</b><br />
-              (Recent entries from <a href="http://www.livejournal.com/\
-              users/jlouder">my LiveJournal</a> page)
-            </p>
-            <p><lj></p>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-</table>
+<div style="background-color: #ffffcc; margin-left: 10%; margin-right: 10%; border: 1px solid black;">
+  <p align="center">
+    <b>What's new with Joel:</b><br />
+    (Recent entries from <a href="http://www.livejournal.com/\
+    users/jlouder">my LiveJournal</a> page)
+  </p>
+  <lj>
 </div>

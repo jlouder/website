@@ -3,13 +3,15 @@
 
 <title "Joel's software: backups">
 
-<heading>Philosophy</heading>
+<heading>Backups</heading>
+
+<h3>Philosophy</h3>
 
 <p>There's an old saying in the computer industry that there are two types of
 people in the world -- those who have lost data and those who will. Drives
 will fail, so it's important to have good backups.</p>
 
-<p>Over the years, I've gone through several backup strategies:
+<p>Over the years, I've gone through several backup strategies:</p>
 <ol>
 <li>Taunting God by not making backups at all.</li>
 <li>Backing up to a floppy-based tape drive using the
@@ -27,9 +29,8 @@ nonempty directories with the ownership/permission of the restoring
 user. That, and I had to patch a few things to make it work better.</li>
 <li>Writing my own software to backup to disk.</li>
 </ol>
-</p>
 
-<p>Here are the goals of my backup software:
+<p>Here are the goals of my backup software:</p>
 <ul>
 <li>Backup to disk, not to tape. Disk is cheap, tapes are cheap but not
 reliable, and tape drives are neither cheap nor reliable.</li>
@@ -43,9 +44,7 @@ monitor my logs, this meant I could monitor for failed backups with no
 extra effort.</li>
 </ul>
 
-<br />
-
-<heading>Using backup.pl</heading>
+<h3>Using backup.pl</h3>
 
 <p>My backup software has a very small footprint. It's one Perl script,
 plus a configuration file for the system running the backups. On my systems,
@@ -75,7 +74,7 @@ Filesystems = / /boot rhinosaur:/ outshined:/ outshined:/boot mailman:/ mailman:
 </screen>
 </p>
 
-<p>And here's an explanation of each of those options:
+<p>And here's an explanation of each of those options:</p>
 <ul>
 <li><tt>SyslogFacility</tt>: The syslog facility to log at. A pet peeve of
 mine is software that logs to syslog but doesn't let you change this.</li>
@@ -96,9 +95,8 @@ is the level of backup you'll get.</li>
 <li><tt>Filesystems</tt>: If you don't specify which filesystems to back up
 on the command line, this is what gets backed up.</li>
 </ul>
-</p>
 
-<heading>Offsite Backups</heading>
+<h3>Offsite Backups</h3>
 
 <p>There's a lot of important data on the systems I back up, and in the event
 of a catastrophe (house burns down, hard drives seized by federal agents, etc.)
@@ -121,9 +119,7 @@ encrypting automatically, and even figures out which backups to take offsite
 also be used for CD-ROM images by adjusting the maximum size of one image,
 but my backups would take up too many CDs.</p>
 
-<br />
-
-<heading>Getting the Software</heading>
+<h3>Getting the Software</h3>
 
 <p>You can grab
 <a href="http://www.home.loudermilk.org/cgi-bin/viewcvs.cgi/backup/">a copy
