@@ -11,6 +11,8 @@
 </head>
 
 <map name="topbarmap">
+  <area shape="rect" coords="36,42,198,76" alt="home" \
+        href="$(ROOT)" />
   <area shape="rect" coords="213,45,260,70" alt="about" \
         href="$(PERSONAL)" />
   <area shape="rect" coords="277,46,336,70" alt="pictures" \
