@@ -1,0 +1,39 @@
+# $Id$
+#include <template.wml> topic="charts"
+
+<title "Joel's charts & graphs: blocked mail">
+
+<p>Everyone hates spam. I'm doing several things to cut down on spam:
+<ul>
+<li>Using sendmail's anti-relaying rules. This doesn't cut down on my spam,
+but keeps spammers from using my system to send out more spam. I've noticed
+that RoadRunner does an open relay test on me about once a month, so at least
+they're trying to make sure their customers run secure mail servers.</li>
+<li>Filtering locally-deliverable mail through
+<a href="http://www.spamassassin.org/">SpamAssassin</a>, which tags probable
+spam messages by adding some headers and altering the subject line and
+body. It decides what's spam by giving points to each message for things
+common in spam (phrases like "make money fast," or the use of large fonts),
+and if the score is above a configurable threshold, it marks the message
+as spam.</li>
+<li>Enabling SpamAssassin's
+<a href="http://eu.spamassassin.org/doc/Mail_SpamAssassin_Bayes.html">Bayesian
+classifier</a>, which can be trained to learn what spam looks like.</li>
+<li>Enabling <a href="http://razor.sourceforge.net/">Vipul's Razor</a> checks
+in SpamAssassin. This checks the "fingerprint" of each message against
+Razor's servers to see if anyone has reported the message as spam.</li>
+<li>Enabling <a href="http://www.rhyolite.com/anti-spam/dcc/">DCC</a> checks
+in SpamAssassin. This checks each message's fingerprint against the DCC
+servers, much like Razor. But with DCC, people don't report whether the message
+is spam or not, they just report that they received that message. The DCC
+check tells me how many people have received that message before. If the
+number of recipients is very large, it's probably spam.</li>
+</ul>
+</p>
+
+<p>Here's a breakdown of how many of the messages my mail server has processed
+this week were rejected or tagged as spam:</p>
+
+#include "/home/jlouder/public_html/mail-table.html"
+
+<p>Last modified: <lastmod /home/jlouder/public_html/mail-table.html /></p>

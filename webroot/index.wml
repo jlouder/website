@@ -1,0 +1,44 @@
+# $Id$
+#include <template.wml>
+
+<title "Joel's web site">
+
+<p>Good day, and welcome to my web site. For maximum viewing enjoyment,
+choose from one of the following areas.</p>
+
+<heading><a href="$(PERSONAL)">About me</a></heading>
+
+<p>Tremendously exciting information about me. That is why you're here,
+right?</p>
+
+<br />
+
+<heading><a href="http://www.home.loudermilk.org/gallery/">Pictures\
+         </a></heading>
+
+<p>Photo galleries of pictures I've taken over the years.</p>
+
+<br />
+
+<heading><a href="$(SOFTWARE)">Software</a></heading>
+
+<p>Information about software I've written.</p>
+
+<br />
+
+<heading><a href="$(CHARTS)">Charts & graphs</a></heading>
+
+<p>Just like the name says -- charts and graphs.</p>
+
+<br />
+
+<heading><a href="$(VOICE)">Voice overs</a></heading>
+
+<p>Information about voice overs, which I used to do a lot of a few years
+ago.</p>
+
+<br />
+
+<heading><a href="$(ROOT)/contact.html">Contact</a></heading>
+
+<p>How to contact me.</p>
