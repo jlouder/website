@@ -34,3 +34,14 @@
   <set-var attrs=<get-file-properties %0 /> />
   <date time="<get-var attrs[3] />" format="%a %d %b %I:%M:%S %p %Z %Y" />
 </define-tag>
+
+# <pod> checks a file out of CVS and returns the HTML version of the POD
+<define-tag pod whitespace=delete>
+  <preserve cvsroot />
+  <preserve file />
+  <set-var %attributes />
+  <if <get-var cvsroot /> "" <set-var cvsroot=/export/cvs /> />
+  <include command="$(ROOT)/../pod2html.sh <get-var cvsroot /> <get-var file />" />
+  <restore file />
+  <restore cvsroot />
+</define-tag>
