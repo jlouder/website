@@ -283,6 +283,8 @@
   2 CONT Mary McQueen in 1974, and there have been several owners since then.
   2 CONT It is assumed that the original structure was built by Cornelius
   2 CONT Neil Murphy.
+1 NOTE John Alexander Murphy Sr. was born, lived, and died in Pender
+  2 CONT County, North Carolina.
 1 FAMC @F0017@
 1 FAMS @F0014@
 1 FAMS @F0013@
@@ -302,7 +304,7 @@
 1 FAMS @F0013@
 
 0 @I0030@ INDI
-1 NAME Mia Charlene Murphy
+1 NAME Mia Charlene /Murphy/
 1 SEX F
 1 BIRT
   2 DATE 19 February 1980
@@ -380,12 +382,13 @@
 1 FAMS @F0016@
 
 0 @I0037@ INDI
-1 NAME John Henry /Murphy/
+1 NAME John Henry /Murphy/ Sr.
   2 NICK Jack
 1 SEX M
 1 BIRT
   2 DATE 12 September 1925
 1 FAMC @F0016@
+1 FAMS @F0027@
 
 0 @I0038@ INDI
 1 NAME Betty Ann /Murphy/
@@ -639,6 +642,109 @@
   2 DATE 3 November 1943
 1 FAMS @F0026@
 
+0 @I0063@ INDI
+1 NAME Stella /DeBaylo/
+1 SEX F
+1 BIRT
+  2 DATE 10 March 1930
+1 FAMS @F0027@
+
+0 @I0064@ INDI
+1 NAME Deborah Lynn /Murphy/
+  2 NICK Lynn
+1 SEX F
+1 BIRT
+  2 DATE 16 December 1954
+1 NOTE Lives in Fuquay, North Carolina
+1 FAMC @F0027@
+1 FAMS @F0028@
+
+0 @I0065@ INDI
+1 NAME Valerie Deane /Murphy/
+  2 NICK Deane
+1 SEX F
+1 BIRT
+  2 DATE 29 February 1956
+1 NOTE Lives in Wilmington, North Carolina
+1 FAMC @F0027@
+1 FAMS @F0029@
+
+0 @I0066@ INDI
+1 NAME John Henry /Murphy/ Jr.
+  2 NICK Johnny
+1 SEX M
+1 BIRT
+  2 DATE 24 April 1958
+1 NOTE Lives in Wilmington, North Carolina
+1 FAMC @F0027@
+1 FAMS @F0030@
+
+0 @I0067@ INDI
+1 NAME Ronald Wesley /Murphy/
+  2 NICK Ron
+1 SEX M
+1 BIRT
+  2 DATE 13 October 1961
+1 NOTE Lives in Burgaw, North Carolina
+1 FAMC @F0027@
+
+0 @I0068@ INDI
+1 NAME Vann Kirk /Stephenson/ Sr.
+1 SEX M
+1 BIRT
+  2 DATE 24 March 1958
+1 NOTE Lives in Fuquay, North Carolina
+1 FAMS @F0028@
+
+0 @I0069@ INDI
+1 NAME Lauren McKenzie /Stephenson/
+1 SEX F
+1 BIRT
+  2 DATE 15 January 1993
+1 NOTE Lives in Fuquay, North Carolina
+1 FAMC @F0028@
+
+0 @I0070@ INDI
+1 NAME Vann Kirk /Stephenson/ Jr.
+1 SEX M
+1 BIRT
+  2 DATE 27 July 1994
+1 NOTE Lives in Fuquay, North Carolina
+1 FAMC @F0028@
+
+0 @I0071@ INDI
+1 NAME Giuseppe /Viola/
+1 SEX M
+1 BIRT
+  2 DATE 19 March 1951
+1 NOTE Lives in Wilmington, North Carolina
+1 FAMS @F0029@
+
+0 @I0072@ INDI
+1 NAME Valerie Maria /Viola/
+1 SEX F
+1 BIRT
+  2 DATE 31 December 1984
+1 NOTE Lives in Wilmington, North Carolina
+1 FAMC @F0029@
+
+0 @I0073@ INDI
+1 NAME Francesco Anthony /Viola/
+1 SEX M
+1 BIRT
+  2 DATE 31 May 1986
+1 NOTE Lives in Wilmington, North Carolina
+1 FAMC @F0029@
+
+0 @I0074@ INDI
+1 NAME Julie Ann /King/
+1 SEX F
+1 BIRT
+  2 DATE 4 October 1970
+1 NOTE Lives in Wilmington, North Carolina
+1 FAMS @F0030@
+
+
 
 
 
@@ -818,5 +924,37 @@
   2 PLAC Jamestown, North Carolina
 1 HUSB @I0024@
 1 WIFE @I0062@
+
+0 @F0027@ FAM
+1 MARR
+  2 DATE 19 January 1952
+1 HUSB @I0037@
+1 WIFE @I0063@
+1 CHIL @I0064@
+1 CHIL @I0065@
+1 CHIL @I0066@
+1 CHIL @I0067@
+
+0 @F0028@ FAM
+1 MARR
+  2 DATE 20 November 1988
+1 HUSB @I0068@
+1 WIFE @I0064@
+1 CHIL @I0069@
+1 CHIL @I0070@
+
+0 @F0029@ FAM
+1 MARR
+  2 DATE 9 August 1981
+1 HUSB @I0071@
+1 WIFE @I0065@
+1 CHIL @I0072@
+1 CHIL @I0073@
+
+0 @F0030@ FAM
+1 MARR
+  2 DATE 27 November 1999
+1 HUSB @I0066@
+1 WIFE @I0074@
 
 0 TRLR
