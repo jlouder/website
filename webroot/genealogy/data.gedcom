@@ -396,6 +396,8 @@
 1 BIRT
   2 DATE 10 April 1928
 1 FAMC @F0016@
+1 NOTE Lives in Emporia, Virginia
+1 FAMS @F0031@
 
 0 @I0039@ INDI
 1 NAME William Alexander /Murphy/
@@ -403,7 +405,9 @@
 1 SEX M
 1 BIRT
   2 DATE 4 February 1932
+1 NOTE Lives in Burgaw, North Carolina
 1 FAMC @F0016@
+1 FAMS @F0034@
 
 0 @I0040@ INDI
 1 NAME James MacRae /Murphy/
@@ -432,6 +436,7 @@
 1 BURI
   2 PLAC Oleander Memorial Gardens in Wilmington, North Carolina
 1 FAMC @F0013@
+1 FAMS @F0037@
 
 0 @I0042@ INDI
 1 NAME Rebecca /Murphy/
@@ -444,6 +449,7 @@
 1 BURI
   2 PLAC Cross Creek cemetery in Fayetteville, North Carolina
 1 FAMC @F0013@
+1 FAMS @F0043@
 
 0 @I0043@ INDI
 1 NAME Ashley Monroe /Murphy/
@@ -717,6 +723,8 @@
 1 SEX M
 1 BIRT
   2 DATE 19 March 1951
+1 DEAT
+  2 DATE 2004
 1 NOTE Lives in Wilmington, North Carolina
 1 FAMS @F0029@
 
@@ -744,6 +752,346 @@
 1 NOTE Lives in Wilmington, North Carolina
 1 FAMS @F0030@
 
+0 @I0075@ INDI
+1 NAME Charles Irvin /Grigg/
+1 SEX M
+1 BIRT
+  2 DATE 2 November 1927
+1 NOTE Lives in Emporia, Virginia
+1 FAMS @F0031@
+
+0 @I0076@ INDI
+1 NAME Patricia Ann /Grigg/
+1 SEX F
+1 BIRT
+  2 DATE 24 April 1954
+1 NOTE Lives in Emporia, Virginia
+1 FAMC @F0031@
+1 FAMS @F0032@
+
+0 @I0077@ INDI
+1 NAME Charles Irvin /Grigg/ Jr.
+1 SEX M
+1 BIRT
+  2 DATE 5 November 1960
+1 NOTE Lives in Emporia, Virginia
+1 FAMC @F0031@
+1 FAMS @F0033@
+
+0 @I0078@ INDI
+1 NAME Meade Parham /Horne/
+1 SEX M
+1 BIRT
+  2 DATE 1 October 1953
+1 NOTE Lives in Emporia, Virginia
+1 FAMS @F0032@
+
+0 @I0079@ INDI
+1 NAME Charles Jefferson Berkley /Horne/
+1 SEX M
+1 BIRT
+  2 DATE 27 April 1985
+1 NOTE Lives in Emporia, Virginia
+1 FAMC @F0032@
+
+0 @I0080@ INDI
+1 NAME Murphy Parham /Horne/
+1 SEX F
+1 BIRT
+  2 DATE 6 May 1987
+1 NOTE Lives in Emporia, Virginia
+1 FAMC @F0032@
+
+0 @I0081@ INDI
+1 NAME Susan Kay /Kientz/
+1 SEX F
+1 BIRT
+  2 DATE 31 August 1962
+1 NOTE Lives in Emporia, Virginia
+1 FAMS @F0033@
+
+0 @I0082@ INDI
+1 NAME Charles Irvin /Grigg/ III
+1 SEX M
+1 BIRT
+  2 DATE 3 June 1988
+1 NOTE Lives in Emporia, Virginia
+1 FAMC @F0033@
+
+0 @I0083@ INDI
+1 NAME Joan Elizabeth /Grigg/
+1 SEX F
+1 BIRT
+  2 DATE 21 July 1992
+1 NOTE Lives in Emporia, Virginia
+1 FAMC @F0033@
+
+0 @I0084@ INDI
+1 NAME Barbara /Willis/
+1 SEX F
+1 BIRT
+  2 DATE 8 June 1939
+1 NOTE Lives in Burgaw, North Carolina
+1 FAMS @F0034@
+
+0 @I0085@ INDI
+1 NAME Leslie Ann /Murphy/
+1 SEX F
+1 BIRT
+  2 DATE 9 August 1961
+1 NOTE Lives in Silver Spring, Maryland
+1 NOTE Summer home is in Atkinson, the former home of Miriam Hall Murphy,
+  2 CONT Leslie's grandmother.
+1 FAMC @F0034@
+1 FAMS @F0035@
+
+0 @I0086@ INDI
+1 NAME Alyson Elizabeth /Murphy/
+1 SEX F
+1 BIRT
+  2 DATE 6 August 1963
+1 NOTE Lives in Wilmington, North Carolina
+1 FAMC @F0034@
+1 FAMS @F0036@
+
+0 @I0087@ INDI
+1 NAME Scott William /Woehr/
+1 SEX M
+1 BIRT
+  2 DATE 2 June 1960
+1 NOTE Lives in Silver Spring, Maryland
+1 NOTE Summer home is in Atkinson, the former home of Miriam Hall Murphy,
+  2 CONT Leslie's grandmother.
+1 FAMS @F0035@
+
+0 @I0088@ INDI
+1 NAME Darian Murphy /Woehr/
+1 SEX F
+1 BIRT
+  2 DATE 27 March 1996
+1 NOTE Lives in Silver Spring, Maryland
+1 NOTE Summer home is in Atkinson, the former home of Miriam Hall Murphy,
+  2 CONT Leslie's grandmother.
+1 FAMC @F0035@
+
+0 @I0089@ INDI
+1 NAME Mirian Caprielle /Woehr/
+  2 NICK Caprielle
+1 SEX F
+1 BIRT
+  2 DATE 17 September 1999
+1 NOTE Lives in Silver Spring, Maryland
+1 NOTE Summer home is in Atkinson, the former home of Miriam Hall Murphy,
+  2 CONT Leslie's grandmother.
+1 FAMC @F0035@
+
+0 @I0090@ INDI
+1 NAME Thea Alyssandra /Woehr/
+1 SEX F
+1 BIRT
+  2 DATE 8 July 2004
+1 NOTE Lives in Silver Spring, Maryland
+1 NOTE Summer home is in Atkinson, the former home of Miriam Hall Murphy,
+  2 CONT Leslie's grandmother.
+1 FAMC @F0035@
+
+0 @I0091@ INDI
+1 NAME Andrew Joseph /Farley/
+1 SEX M
+1 BIRT
+  2 DATE 12 May 1966
+1 FAMS @F0036@
+
+0 @I0092@ INDI
+1 NAME Isabella Sage /Farley/
+1 SEX F
+1 BIRT
+  2 DATE 2 August 1996
+1 NOTE Lives in Wilmington, North Carolina
+1 FAMC @F0036@
+
+0 @I0093@ INDI
+1 NAME Kathleen Anna Mae /Ervin/
+1 SEX F
+1 BIRT
+  2 DATE 15 August 1903
+1 DEAT
+  2 DATE 12 August 1973
+1 BURI
+  2 PLAC Oleander Memorial Gardens in Wilmington, North Carolina
+1 NOTE Lived in Wilmington, North Carolina
+1 FAMS @F0037@
+
+0 @I0094@ INDI
+1 NAME Robert Ervin /Murphy/
+  2 NICK Bobby
+1 SEX M
+1 BIRT
+  2 DATE 9 March 1936
+1 DEAT
+  2 DATE 23 June 1995
+1 BURI
+  2 PLAC Lavonia, Georgia
+1 FAMC @F0037@
+1 FAMS @F0038@
+
+0 @I0095@ INDI
+1 NAME Bessie Sronce /Murphy/
+1 SEX F
+1 BIRT
+  2 DATE 13 January 1938
+1 NOTE Lives in Greenville, South Carolina
+1 FAMC @F0037@
+1 FAMS @F0039@
+
+0 @I0096@ INDI
+1 NAME Tommye Sue /Byrd/
+1 SEX F
+1 BIRT
+  2 DATE 27 December 1942
+1 NOTE Lives in Lavonia, Georgia
+1 FAMS @F0038@
+
+0 @I0097@ INDI
+1 NAME Paul Byrd /Murphy/
+1 SEX M
+1 BIRT
+  2 DATE 1 January 1973
+1 FAMC @F0038@
+
+0 @I0098@ INDI
+1 NAME Anna Kathleen /Murphy/
+1 SEX F
+1 BIRT
+  2 DATE 14 December 1977
+1 FAMC @F0038@
+
+0 @I0099@ INDI
+1 NAME William Daniel /Lee/ Jr.
+  2 NICK Bill
+1 SEX M
+1 BIRT
+  2 DATE 28 August 1933
+1 NOTE Lives in Greenville, South Carolina
+1 FAMS @F0039@
+
+0 @I0100@ INDI
+1 NAME Daniel Eaton /Lee/, M.D.
+1 SEX M
+1 BIRT
+  2 DATE 9 July 1961
+1 NOTE Lives in Easley, South Carolina
+1 FAMC @F0039@
+1 FAMS @F0040@
+1 FAMS @F0041@
+
+0 @I0101@ INDI
+1 NAME Stuart Murphy /Lee/
+1 SEX M
+1 BIRT
+  2 DATE 4 October 1973
+1 NOTE Lives in Columbia, South Carolina
+1 FAMC @F0039@
+1 FAMS @F0042@
+
+0 @I0102@ INDI
+1 NAME Mary Hadley /Hazelhurst/
+1 SEX F
+1 BIRT
+  2 DATE 2 February 1960
+1 FAMS @F0040@
+
+0 @I0103@ INDI
+1 NAME Daniel Graham /Lee/
+1 SEX M
+1 BIRT
+  2 DATE 22 May 1987
+1 NOTE Lives in Easley, South Carolina
+1 FAMC @F0040@
+
+0 @I0104@ INDI
+1 NAME Janice /DeBisschop/
+1 SEX F
+1 BIRT
+  2 DATE 27 August 1961
+1 NOTE Lives in Easley, South Carolina
+1 FAMS @F0041@
+
+0 @I0105@ INDI
+1 NAME Jennie Ann /Chastain/
+1 SEX F
+1 BIRT
+  2 DATE 26 April 1973
+1 NOTE Lives in Columbia, South Carolina
+1 FAMS @F0042@
+
+0 @I0106@ INDI
+1 NAME Ann Murphy /Lee/
+1 SEX F
+1 BIRT
+  2 DATE 18 October 2002
+1 NOTE Lives in Columbia, South Carolina
+1 FAMC @F0042@
+
+0 @I0107@ INDI
+1 NAME Malcolm McInnis /McQueen/
+1 SEX M
+1 BIRT
+  2 DATE 30 November 1904
+1 DEAT
+  2 DATE 14 August 1956
+1 BURI
+  2 PLAC Cross Creek Cemetery in Fayetteville, North Carolina
+1 FAMS @F0043@
+
+0 @I0108@ INDI
+1 NAME Virginia Murphy /McQueen/
+1 SEX F
+1 BIRT
+  2 DATE 11 August 1931
+1 FAMC @F0043@
+1 FAMS @F0044@
+1 FAMS @F0045@
+
+0 @I0109@ INDI
+1 NAME James Scott /McFadyen/ Jr.
+  2 NICK Scott
+1 SEX M
+1 BIRT
+  2 DATE 30 November 1929
+1 FAMS @F0044@
+
+0 @I0110@ INDI
+1 NAME James Malcolm /McFadyen/
+1 SEX M
+1 BIRT
+  2 DATE 14 September 1956
+1 NOTE Lives in Fayetteville, North Carolina
+1 FAMC @F0044@
+
+0 @I0111@ INDI
+1 NAME William Currie /McFadyen/
+  2 NICK Bill
+1 SEX M
+1 BIRT
+  2 DATE 14 February 1961
+1 NOTE Lives in Fayetteville, North Carolina
+1 FAMC @F0044@
+
+0 @I0112@ INDI
+1 NAME John Scott /McFadyen/
+1 SEX M
+1 BIRT
+  2 DATE 11 June 1964
+1 NOTE Lives in Fayetteville, North Carolina
+1 FAMC @F0044@
+
+0 @I0113@ INDI
+1 NAME General John Milton /Rose/
+1 SEX M
+1 BIRT
+  2 DATE 17 June 1923
+1 FAMS @F0045@
 
 
 
@@ -956,5 +1304,120 @@
   2 DATE 27 November 1999
 1 HUSB @I0066@
 1 WIFE @I0074@
+
+0 @F0031@ FAM
+1 MARR
+  2 DATE 18 November 1951
+1 HUSB @I0075@
+1 WIFE @I0038@
+1 CHIL @I0076@
+1 CHIL @I0077@
+
+0 @F0032@ FAM
+1 MARR
+  2 DATE 10 July 1982
+1 HUSB @I0078@
+1 WIFE @I0076@
+1 CHIL @I0079@
+1 CHIL @I0080@
+
+0 @F0033@ FAM
+1 MARR
+  2 DATE 1 June 1985
+1 HUSB @I0077@
+1 WIFE @I0081@
+1 CHIL @I0082@
+1 CHIL @I0083@
+
+0 @F0034@ FAM
+1 MARR
+  2 DATE 20 August 1960
+1 HUSB @I0039@
+1 WIFE @I0084@
+1 CHIL @I0085@
+1 CHIL @I0086@
+
+0 @F0035@ FAM
+1 MARR
+  2 DATE 19 August 1989
+1 HUSB @I0087@
+1 WIFE @I0085@
+1 CHIL @I0088@
+1 CHIL @I0089@
+1 CHIL @I0090@
+
+0 @F0036@ FAM
+1 MARR
+1 DIV
+1 HUSB @I0091@
+1 WIFE @I0086@
+1 CHIL @I0092@
+
+0 @F0037@ FAM
+1 MARR
+  2 DATE 21 June 1933
+1 HUSB @I0041@
+1 WIFE @I0093@
+1 CHIL @I0094@
+1 CHIL @I0095@
+
+0 @F0038@ FAM
+1 MARR
+  2 DATE 25 July 1968
+1 HUSB @I0094@
+1 WIFE @I0096@
+1 CHIL @I0097@
+1 CHIL @I0098@
+
+0 @F0039@ FAM
+1 MARR
+  2 DATE 25 June 1960
+1 HUSB @I0099@
+1 WIFE @I0095@
+1 CHIL @I0100@
+1 CHIL @I0101@
+
+0 @F0040@ FAM
+1 MARR
+  2 DATE 29 December 1983
+1 DIV
+1 HUSB @I0100@
+1 WIFE @I0102@
+1 CHIL @I0103@
+
+0 @F0041@ FAM
+1 MARR
+  2 DATE 20 July 2002
+1 HUSB @I0100@
+1 WIFE @I0104@
+
+0 @F0042@ FAM
+1 MARR
+  2 DATE 28 April 2001
+1 HUSB @I0101@
+1 WIFE @I0105@
+1 CHIL @I0106@
+
+0 @F0043@ FAM
+1 MARR
+  2 DATE 30 November 1929
+1 HUSB @I0107@
+1 WIFE @I0042@
+1 CHIL @I0108@
+
+0 @F0044@ FAM
+1 MARR
+  2 DATE 27 February 1954
+1 DIV
+1 HUSB @I0109@
+1 WIFE @I0108@
+1 CHIL @I0110@
+1 CHIL @I0111@
+1 CHIL @I0112@
+
+0 @F0045@ FAM
+1 MARR
+1 HUSB @I0113@
+1 WIFE @I0108@
 
 0 TRLR
