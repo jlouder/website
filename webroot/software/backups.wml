@@ -45,14 +45,6 @@ extra effort.</li>
 
 <br />
 
-<heading>Getting backup.pl</heading>
-
-<p>You can grab
-<a href="http://www.home.loudermilk.org/cgi-bin/viewcvs.cgi/backup/">a copy
-of backup.pl</a> out of my CVS repository.</p>
-
-<br />
-
 <heading>Using backup.pl</heading>
 
 <p>My backup software has a very small footprint. It's one Perl script,
@@ -105,3 +97,37 @@ is the level of backup you'll get.</li>
 on the command line, this is what gets backed up.</li>
 </ul>
 </p>
+
+<heading>Offsite Backups</heading>
+
+<p>There's a lot of important data on the systems I back up, and in the event
+of a catastrophe (house burns down, hard drives seized by federal agents, etc.)
+I don't want to lose my backups along with my data, so I periodically burn
+images of the most recent backups onto DVD media.</p>
+
+<p>I thought this would be simple, but there were actually several obstacles
+to overcome in getting the backups onto DVDs with as little fuss as possible.
+For one thing, DVDs can only hold about 4.3 GB of data and a full set of
+my backups is around 9 GB. I needed to split some of the files across multiple
+DVDs. I also learned that <tt>mkisofs</tt> won't handle files larger than 2 GB,
+so I need to split any file larger than 2 GB into smaller pieces. And since
+it would be easy for someone to walk off with my DVDs and read all my data
+from the backups, I need to encrypt the backup files with GPG before burning
+them to DVD and taking them offsite.</p>
+
+<p>To do all this, I wrote <tt>offsite.pl</tt>. It does all the splitting and
+encrypting automatically, and even figures out which backups to take offsite
+(it takes the most recent level 0 and level 1 of every filesystem). It can
+also be used for CD-ROM images by adjusting the maximum size of one image,
+but my backups would take up too many CDs.</p>
+
+<br />
+
+<heading>Getting the Software</heading>
+
+<p>You can grab
+<a href="http://www.home.loudermilk.org/cgi-bin/viewcvs.cgi/backup/">a copy
+of backup.pl and offsite.pl</a> out of my CVS repository. There's POD
+documentation embedded in the scripts, and HTML versions of the documentation
+for <a href="backup.man.html">backup.pl</a> and
+<a href="offsite.man.html">offsite.pl</a> available.</p>
