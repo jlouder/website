@@ -2,7 +2,7 @@
 # definitions for the context-sensitive navigation bar
 
 # list of topics
-<set-var topics="charts\nsoftware" />
+<set-var topics="charts\nsoftware\nabout" />
                                                                                 
 # the navbars, which must be in the order they appear in the topics list
 # the 'charts' navbar
@@ -26,6 +26,12 @@
       <td width="20%"><a href="http://clockwork.sourceforge.net/">clockwork</a>\
       </td>
       <td width="20%"><a href="$(SOFTWARE)/website.html">web site</a></td>
+<divert>
+
+# the 'about' navbar
+<divert divnum="3">
+      <td width="50%"><a href="$(PERSONAL)/aboutme.html">about me</a></td>
+      <td width="50%"><a href="$(ROOT)/genealogy/">genealogy</a></td>
 <divert>
 
 # a <navbar> tag to make the magic happen
