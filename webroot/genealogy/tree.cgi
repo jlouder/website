@@ -425,9 +425,6 @@ Date_Init();
 
 # load the data file
 my $ged = Gedcom->new(gedcom_file => $dataFile);
-if( ! $ged->validate() ) {
-  ErrorPage("Data file $dataFile failed validation");
-}
 
 my $q = new CGI;
 
