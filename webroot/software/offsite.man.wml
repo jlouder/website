@@ -3,4 +3,4 @@
 
 <title "Joel's software: offsite man page">
 
-<pod file=backup/backup.pl />
+<pod file=backup/offsite.pl />
