@@ -1,0 +1,36 @@
+# $Id$
+# definitions for the context-sensitive navigation bar
+
+# list of topics
+<set-var topics="charts\nsoftware" />
+                                                                                
+# the navbars, which must be in the order they appear in the topics list
+# the 'charts' navbar
+<divert divnum="1">
+      <td width="14%"><a href="$(CHARTS)/blockedmail.html">blocked mail</a></td>
+      <td width="14%"><a href="$(CHARTS)/blockedports.html">blocked ports</a>\
+      </td>
+      <td width="14%"><a href="$(CHARTS)/analog.html">web site stats</a></td>
+      <td width="14%"><a href="$(CHARTS)/ups.html">UPS</a></td>
+      <td width="14%"><a href="$(CHARTS)/seti.html">SETI@home</a></td>
+      <td width="14%"><a href="$(CHARTS)/mrtg_lan.html">cable modem traffic\
+                      </a></td>
+      <td width="14%"><a href="$(CHARTS)/mrtg_wireless.html">wireless traffic\
+                      </a></td>
+<divert>
+                                                                                
+# the 'software' navbar
+<divert divnum="2">
+      <td width="20%"><a href="http://www.home.loudermilk.org/giftreg/">gift \
+                      wishlists</a></td>
+      <td width="20%"><a href="$(SOFTWARE)/backups.html">backups</a></td>
+      <td width="20%"><a href="$(SOFTWARE)/smt.html">smt</a></td>
+      <td width="20%"><a href="http://clockwork.sourceforge.net/">clockwork</a>\
+      </td>
+      <td width="20%"><a href="$(SOFTWARE)/website.html">web site</a></td>
+<divert>
+
+# a <navbar> tag to make the magic happen
+<define-tag navbar>
+  <undivert divnum="<add <array-member topics $(topic) /> 1 />" />
+</define-tag>

@@ -1,0 +1,63 @@
+/* $Id$ */
+
+body
+{
+  background: #5d5d54;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica;
+  font-size: 10pt;
+  color: #ffffcc;
+}
+
+a:link
+{
+  color: #ffffcc;
+  font-weight: bold;
+}
+
+a:visited
+{
+  color: #ffffcc;
+  font-weight: bold;
+}
+
+.navbar
+{
+  font-size: 10pt;
+  text-align: center;
+  background-color: #303c0c;
+}
+
+.content
+{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 10pt;
+}
+
+.boxtext
+{
+  font-size: 12pt;
+  font-weight: bold;
+  color: #1d1d44;
+}
+
+.screentext
+{
+  font-size: 10pt;
+  font-family: Courier New, Courier;
+  color: #1d1d44;
+}
+
+span.boxtext a:link
+{
+  color: #1d1d44;
+}
+
+span.boxtext a:visited
+{
+  color: #1d1d44;
+}

@@ -1,0 +1,201 @@
+# $Id$
+#include <template.wml> topic="software"
+
+<title "Joel's software: smt-config(4) man page">
+
+<H2>DESCRIPTION</H2><PRE>
+       The  smt-config file stores the configuration for the ser­
+       vice monitoring tool, which  tests  user-defined  services
+       periodically  to determine if the services are functioning
+       correctly.
+
+       The configuration  consists  of  three  sections:  general
+       options,  test  definitions,  and group definitions. These
+       types of information can appear in the configuration  file
+       in any order.
+
+       Blank lines and lines beginning with a hash mark (`#') are
+       ignored.
+
+
+</PRE>
+<H2>SYNTAX</H2><PRE>
+       The syntax of the smt-config file is as follows:
+
+       logfile <I>pathname</I>
+       [ pidfile <I>pathname</I> ]
+       [ logdetail <I>integer</I> ]
+       [ nicelevel <I>integer</I> ]
+
+       test <I>name</I> {
+         command <I>pathname</I>
+         [ message <I>string</I> ]
+         [ successcode <I>integer</I> ]
+         [ timeout <I>integer</I> ]
+       }
+
+       group <I>name</I> {
+         notification <I>pathname</I>
+         [ frequency <I>integer</I> ]
+         [ prerequisite <I>test-name</I> ] ...
+         test <I>test-name</I>
+         [ test <I>test-name</I> ] ...
+       }
+
+
+</PRE>
+<H2>GENERAL OPTIONS</H2><PRE>
+       General options control the behavior of the service  moni­
+       toring tool:
+
+       logfile <I>pathname</I>
+         Controls where logging information is sent. The <I>pathname</I>
+         parameter must be enclosed in double quotes. This param­
+         eter is required.
+
+       pidfile <I>pathname</I>
+         Specifies  the  name of a file to which the daemon's PID
+         will be written at startup. The <I>pathname</I> parameter  must
+         be   enclosed  in  double  quotes.   This  parameter  is
+         optional; if it is not specified, the PID is not written
+         to a file.
+
+       logdetail <I>integer</I>
+         Determines  how much detail will be recorded in the log-
+         file. The specified integer must be  non-negative.  Each
+         detail  level  includes its detail and the detail of all
+         lower-numbered levels. The various levels of logging are
+         as follows:
+         Level   Detail Logged
+           0     Errors
+           2     Test failures
+           3     All test results
+           4     Informational status messages
+           6     Debugging: general information
+           7     Debugging: function entry points
+
+         This  parameter is optional; if it is not specified, the
+         detail level is set to zero.
+
+       nice <I>integer</I>
+         Adds the value of <I>integer</I> to the nice value of the  dae­
+         mon  process.  This  parameter is optional; if it is not
+         specified, the nice value is unchanged.
+
+
+</PRE>
+<H2>TEST SPECIFICATION</H2><PRE>
+       Each test which will be used as a member of a group  or  a
+       prerequisite   (or   both)  must  first  be  defined.  The
+       attributes of a test are as follows:
+
+       <I>name</I>
+         The name of the test, which must be enclosed in  double-
+         quotes. This is used to refer to the test when including
+         it in a group. This parameter is required.
+
+       command <I>pathname</I>
+         The command the test will execute. The <I>pathname</I> must  be
+         enclosed  in  double-quotes,  and  may include spaces to
+         delimit parameters. This parameter is required.
+
+       message <I>string</I>
+         This is the message used in a notification message  when
+         the  test  indicates  a  change  of state of the service
+         being tested. The <I>string</I> argument must  be  enclosed  in
+         double-quotes.   There  are  several  special  character
+         sequences recognized in the string, which  are  replaced
+         by other text:
+         Code        Replaced by
+          %t    Test name
+          %g    Group name
+          %S    "SUCCESS" or "FAILURE"
+          %s    "success" or "failure"
+          %U    "UP" or "DOWN"
+          %u    "up" or "down"
+         This  parameter  is  optional; if it is not specified, a
+         message of "%t is %U" is used.
+
+       successcode <I>integer</I>
+         Determines what return code from the test command  indi­
+         cates  success of the test. The return code must exactly
+         match <I>integer</I> , or the test will be considered  to  have
+         failed.  This parameter is optional; if it is not speci­
+         fied, a return code of zero indicated success.
+
+       timeout <I>integer</I>
+         Determines the length of time (in seconds) the test com­
+         mand  may  run  before  timing  out.  Test  timeouts are
+         treated  the  same  as  failures.  This   parameter   is
+         optional;  if  it is not specified, a timeout of 60 sec­
+         name must be enclosed in double-quotes.  This  parameter
+         is required.
+
+       notification <I>pathname</I>
+         Specifies  the  command  to  run when notification about
+         member tests is  required.   The  <I>pathname</I>  can  include
+         spaces to delimit arguments to the notification command,
+         and must be enclosed in double-quotes.   When  executed,
+         an  additional  parameter  will be added which specifies
+         the name of a file which contains the notification  mes­
+         sage. This parameter is required.
+
+       frequency <I>integer</I>
+         Specifies the frequency (in seconds) with which the mem­
+         ber tests should be executed. If one or more  tests  are
+         still  running  after  <I>integer</I> seconds elapse, the tests
+         will not be executed again  until  they  complete.  This
+         parameter  is  optional;  if it is not specified, a fre­
+         quency of 600 seconds (10 minutes) is used.
+
+       prerequisite <I>test-name</I>
+         Designates that <I>test</I> (which must be enclosed in  double-
+         quotes)  is  a  prerequisite  for  all the tests in this
+         group. More than one prerequisite may be specified,  but
+         the  "prerequisite"  keyword  must  precede each. If the
+         group's tests are scheduled to be executed, all  prereq­
+         uisite  tests  must have succeeded on their last run. If
+         not, the group's tests will not be executed. A prerequi­
+         site  test  is not a member of a group it is a prerequi­
+         site for; it will  not  be  executed  as  part  of  that
+         group's execution. This parameter is optional.
+
+       test <I>test-name</I>
+         Makes  the  test named <I>test-name</I> (which must be enclosed
+         in double-quotes) a member of the  group.  A  group  may
+         have  more  than one member test. All of a group's tests
+         are  executed  at  the  same  time.  This  parameter  is
+         required; a group must have at least one member test.
+
+
+</PRE>
+<H2>EXAMPLE</H2><PRE>
+       An  example  configuration file which uses all keywords to
+       define two tests and one group is as follows:
+
+       logfile "/home/smt/log/smt.log"
+       logdetail 2
+       nicelevel 10
+
+       test "link test" {
+         command "/usr/sbin/ping router.isp.net"
+         message "My link to the outside world is %U"
+         successcode 0
+         timeout 10
+
+       }
+
+
+</PRE>
+<H2>SEE ALSO</H2><PRE>
+       <B><a href="smt.1.man.html">smt(1)</a></B>
+
+
+</PRE>
+<H2>BUGS</H2><PRE>
+       Bug reports should be sent to &lt;bugs@doodlabs.com&gt;.
+
+
+
+                         August 19, 1999            <B>smt-config(4)</B>
+</PRE>

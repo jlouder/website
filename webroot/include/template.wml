@@ -1,0 +1,52 @@
+# $Id$
+# The WML template for all pages
+
+#include <tags.wml>
+#include <navbar.wml>
+
+<html>
+<head>
+<link rel="stylesheet" href="$(ROOT)/stylesheet.css" type="text/css">
+<title>{#TITLE#}</title>
+</head>
+
+<body>
+<center>
+<table border="0" width="750" cellpadding="0" cellspacing="0">
+<tr>
+  <td colspan=4><img src="$(IMAGES)/topbar.gif"></td>
+</tr>
+<tr>
+  <td width="25"><img src="$(IMAGES)/navbar_left.gif" width="25" height="25"></td>
+  <td width="1" bgcolor="#e1e1e4"><img src="$(IMAGES)/1px.gif"></td>
+  <td class="navbar"><table border="0" width="100%" class="navbar">
+      <tr><navbar /></tr>
+    </table>
+  <td width="35"><img src="$(IMAGES)/navbar_right.gif" width="35" height="25"></td>
+</tr>
+
+<tr>
+  <td></td>
+  <td width="1" bgcolor="#e1e1e4"></td>
+  <td><div class="content">
+<!-- END HEADER -->
+<br />
+{#BODY#}
+<!-- BEGIN FOOTER -->
+<br />
+<br />
+</p></td>
+  <td></td>
+</tr>
+</table>
+</center>
+</body>
+</html>
+
+# a way to define the title
+<define-tag title>
+{#TITLE#:%0:##}
+</define-tag>
+
+# everything after here (the real page content) is body
+{#BODY#:

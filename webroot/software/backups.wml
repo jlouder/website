@@ -1,0 +1,107 @@
+# $Id$
+#include <template.wml> topic="software"
+
+<title "Joel's software: backups">
+
+<heading>Philosophy</heading>
+
+<p>There's an old saying in the computer industry that there are two types of
+people in the world -- those who have lost data and those who will. Drives
+will fail, so it's important to have good backups.</p>
+
+<p>Over the years, I've gone through several backup strategies:
+<ol>
+<li>Taunting God by not making backups at all.</li>
+<li>Backing up to a floppy-based tape drive using the
+<a href="http://www.instmath.rwth-aachen.de/~heine/ftape/">ftape 
+driver</a> for Linux. These tapes have limited capacity, so I could only backup
+critical data. Also, because tape drives that attach to the floppy controller
+are so archaic, people using these are lauged at by just about everyone.</li>
+<li>Backing up everything to a large disk using
+<a href="http://flexbackup.sourceforge.net/">flexbackup</a>. At least
+I thought I was backing up everything. I had to do a complete restore
+once and discovered that flexbackup's method of eliminating files you
+tell it to ignore (like <tt>/tmp</tt>) is to not backup directories
+at all, so a complete restore misses empty directories and restores
+nonempty directories with the ownership/permission of the restoring
+user. That, and I had to patch a few things to make it work better.</li>
+<li>Writing my own software to backup to disk.</li>
+</ol>
+</p>
+
+<p>Here are the goals of my backup software:
+<ul>
+<li>Backup to disk, not to tape. Disk is cheap, tapes are cheap but not
+reliable, and tape drives are neither cheap nor reliable.</li>
+<li>Backups must be able to be extracted using only tools that are available
+on Linux rescue CDs. My backups are just GNU tar files compressed with
+bzip2.</li>
+<li>Log to syslog. The administrator can then decide if backup logs should be
+in a separate file or combined with other system logs. Since I use
+<a href="http://packages.debian.org/stable/admin/logcheck">logcheck</a> to
+monitor my logs, this meant I could monitor for failed backups with no
+extra effort.</li>
+</ul>
+
+<br />
+
+<heading>Getting backup.pl</heading>
+
+<p>You can grab
+<a href="http://www.home.loudermilk.org/cgi-bin/viewcvs.cgi/backup/">a copy
+of backup.pl</a> out of my CVS repository.</p>
+
+<br />
+
+<heading>Using backup.pl</heading>
+
+<p>My backup software has a very small footprint. It's one Perl script,
+plus a configuration file for the system running the backups. On my systems,
+I choose to use a local "exclude file" on each system getting backed up
+to list directories that GNU tar should exclude (excluding pathnames listed
+in a file is a feature of GNU tar, so there's no special programming required
+for this). Other than that, you just need to have GNU tar, bzip2, and ssh
+if you want to back up remote systems.</p>
+
+<p>Here's the command line syntax:
+<screen>\
+USAGE: ./backup.pl [ --config &lt;cfgfile&gt; ] [ --all ] &lt;filesystem&gt;
+[ &lt;filesystem&gt; .. ]
+</screen>
+</p>
+
+<p>Here's my configuration file, so you can see how to configure the
+backups:
+<screen>\
+SyslogFacility = user<br />
+SshIdentityFile = /root/.ssh/identity.flexbackup<br />
+BackupDirectory = /backup<br />
+StateDirectory = /var/state/backup<br />
+ExcludeFile = /etc/backup/exclude<br />
+Level = 0<br />
+Filesystems = / /boot rhinosaur:/ outshined:/ outshined:/boot mailman:/ mailman:/var<br />\
+</screen>
+</p>
+
+<p>And here's an explanation of each of those options:
+<ul>
+<li><tt>SyslogFacility</tt>: The syslog facility to log at. A pet peeve of
+mine is software that logs to syslog but doesn't let you change this.</li>
+<li><tt>SshIdentityFile</tt>: This is the private key used to <tt>ssh</tt>
+into remote systems. This shouldn't ask for a password, since the backups
+need to run unattended. For local backups, this isn't used.</li>
+<li><tt>BackupDirectory</tt>: Where to put the backups.</li>
+<li><tt>StateDirectory</tt>: Where to store the timestamp files that record
+when the last level <i>n</i> backup of each filesystem was taken.</li>
+<li><tt>ExcludeFile</tt>: A file listing pathnames that GNU tar should exclude.
+This pathname is used on every system, so the exclude file should be in the
+same plase on all your systems. The pathnames in the file should be relative
+to what tar is backing up, so if you're backing up <tt>/</tt> and you want
+to exclude <tt>/var/log</tt>, your entry should be <tt>var/log</tt> (note the
+lack of a leading <tt>/</tt>).</li>
+<li><tt>Level</tt>: If you don't specify the level with <tt>--level</tt>, this
+is the level of backup you'll get.</li>
+<li><tt>Filesystems</tt>: If you don't specify which filesystems to back up
+on the command line, this is what gets backed up.</li>
+</ul>
+</p>

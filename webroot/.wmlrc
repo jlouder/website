@@ -1,0 +1,4 @@
+-D ROOT~.
+-D IMAGES~images
+-D SOFTWARE~software
+-D CHARTS~charts

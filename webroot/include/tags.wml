@@ -1,0 +1,27 @@
+# $Id$
+# defines custom WML tags
+
+# <heading> -- use this to make some title-ish text stand out
+<define-tag heading endtag=required>\
+  <table border="0" cellspacing="0" cellpadding="1">\
+    <tr>\
+      <td bgcolor="#1d1d44">\
+        <table border="0" cellspacing="0" cellpadding="3">\
+          <tr>\
+            <td bgcolor="#b1ad9c">\
+              <span class="boxtext">%body</span>\
+            </td>\
+          </tr>\
+        </table>\
+      </td>\
+    </tr>\
+  </table>\
+</define-tag>
+
+# <screen> makes text look like it came from a computer screen
+<define-tag screen endtag=required>\
+  <blockquote>\
+    <span class="screentext">%body</span>\
+  </blockquote>
+</define-tag>
+
