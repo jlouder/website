@@ -1,0 +1,22 @@
+# $Id$
+#include <template.wml>
+
+<title "Contact Joel">
+
+<p>You can reach me by email at <tt><a href="mailto:joel@loudermilk.org">\
+joel@loudermilk.org</a></tt>.</p>
+
+<p>If you need to send a message immediately, you can send a text message
+to my mobile phone below. Remember to identify yourself in the text of the
+message.
+
+<div align="center">
+<form action="/cgibin/pager.cgi" method="post">
+<textarea name="message" wrap="soft" cols=42 rows=3></textarea>\
+<br>
+<br>
+<input type="submit" value="Send Message">
+<input type="reset" value="Start Over">
+</form>
+</div>
+</p>
