@@ -10,13 +10,11 @@
       <td width="14%"><a href="$(CHARTS)/blockedmail.html">blocked mail</a></td>
       <td width="14%"><a href="$(CHARTS)/blockedports.html">blocked ports</a>\
       </td>
-      <td width="14%"><a href="$(CHARTS)/analog.html">web site stats</a></td>
-      <td width="14%"><a href="$(CHARTS)/ups.html">UPS</a></td>
-      <td width="14%"><a href="$(CHARTS)/seti.html">SETI@home</a></td>
-      <td width="14%"><a href="$(CHARTS)/mrtg_lan.html">cable modem traffic\
-                      </a></td>
-      <td width="14%"><a href="$(CHARTS)/mrtg_wireless.html">wireless traffic\
-                      </a></td>
+      <td width="14%"><a href="http://www.loudermilk.org/stats/stats.html">web site stats</a></td>
+      <td width="14%"><a href="http://www.home.loudermilk.org/cgi-bin/nut/upsstats.cgi?host=apcsu700@spoonman&use_celsius=0">UPS</a></td>
+      <td width="14%"><a href="http://www.loudermilk.org/seti/">SETI@home</a></td>
+      <td width="14%"><a href="http://www.home.loudermilk.org/mrtg/rhinosaur_eth1.html">cable modem</a></td>
+      <td width="14%"><a href="http://www.home.loudermilk.org/mrtg/rhinosaur_eth2.html">wireless</a></td>
 <divert>
                                                                                 
 # the 'software' navbar
@@ -32,5 +30,8 @@
 
 # a <navbar> tag to make the magic happen
 <define-tag navbar>
-  <undivert divnum="<add <array-member topics $(topic) /> 1 />" />
+  <if "$(topic)"
+    <undivert divnum="<add <array-member topics $(topic) /> 1 />" />
+    ""
+  />
 </define-tag>
