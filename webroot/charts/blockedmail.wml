@@ -34,6 +34,16 @@ number of recipients is very large, it's probably spam.</li>
 <p>Here's a breakdown of how many of the messages my mail server has processed
 this week were rejected or tagged as spam:</p>
 
+<div align="center">
 #include "/home/jlouder/public_html/mail-table.html"
+<p>As of: <lastmod /home/jlouder/public_html/mail-table.html /></p>
+</div>
 
-<p>Last modified: <lastmod /home/jlouder/public_html/mail-table.html /></p>
+<br />
+
+<p>And here's a graph of how much of that spam is addressed to me:</p>
+
+<div align="center">
+<img src="http://www.home.loudermilk.org/~jlouder/spamgraph.png">
+</div>
+
