@@ -70,6 +70,11 @@ td {
   font-size: 9pt;
 }
 
+h1, h2, h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 a:link
 {
   color: #ffffcc;
@@ -721,6 +726,13 @@ if( $numChildren > 0 ) {
   push @table, [ @row9 ];
 }
 
-print header(), StartHTML("Family tree for " . Name($ind));
+print header(), StartHTML("Family tree for " . Name($ind)),
+      "<div align=\"center\"><h3>Family tree for:</h3>\n",
+      "<h1>", Name($ind), "</h1></div>\n",
+      "<br /><br /><br />\n";
+
 PrintTable(@table);
-print EndHTML();
+
+print '<br /><br /><div align="center"><a href="index.html">Back to the ',
+      'Loudermilk Genealogy page</a></div>',
+      EndHTML();
