@@ -3,7 +3,6 @@
 use CGI;
 use CGI::Carp qw(fatalsToBrowser);
 use Socket;
-use Net::SNPP;
 
 my $logfile = '/home/jlouder/pager.log';
 
