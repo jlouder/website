@@ -10,7 +10,7 @@
 <p>Everyone likes charts and graphs. If not everyone, then at least me. Here
 are some of my favorites:</p>
 
-<h3><a href="blockedmail.html">Blocked mail</a></h3>
+<h3><a href="blockedmail.html">Spam</a></h3>
 
 <p>To defend myself against spam, I use the stock sendmail anti-relaying rules,
 <a href="http://www.spamassassin.org/">SpamAssassin</a> (with the
@@ -20,7 +20,7 @@ and <a href="http://razor.sourceforge.net/">Vipul's Razor</a> enabled). The
 SpamAssassin checks don't reject mail, though -- they just tag it. This page
 shows how much mail was rejected or tagged as spam so far this week.</p>
 
-<h3><a href="blockedports.html">Blocked ports</a></h3>
+<h3><a href="blockedports.html">Firewall</a></h3>
 
 <p>Here you can see which ports have been blocked most frequently at my
 firewall over the past 24 hours. This sometimes is an indicator of what
@@ -48,7 +48,7 @@ the SETI@home project.</p>
 <p>View graphs of the usage of my cable modem connection to the Internet.</p>
 
 <h3><a href="http://www.home.loudermilk.org/mrtg/rhinosaur_eth2.html">\
-         Wireless network</a></h3>
+         Wireless LAN</a></h3>
 
 <p>I have a wireless network at home that doesn't get much use. These graphs
 will show you just how little use it gets.</p>
