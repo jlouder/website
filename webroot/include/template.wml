@@ -44,7 +44,7 @@
 <tr>
   <td></td>
   <td width="1" bgcolor="#e1e1e4"></td>
-  <td><div class="content">
+  <td width="689"><div class="content">
 <!-- END HEADER -->
 <br />
 {#BODY#}
