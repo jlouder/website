@@ -168,7 +168,13 @@
 1 NAME Nellie Belle /Nix/
 1 SEX F
 1 BIRT
+  2 DATE 23 August 1885
 1 DEAT
+  2 DATE 17 July 1967
+  2 PLAC Marietta, Georgia
+1 BURI
+  2 PLAC Mount Bethel Church Cemetery, Marietta, Georgia
+1 SSN 258-80-4644
 1 FAMC @F0051@
 1 FAMS @F0007@
 
@@ -1373,6 +1379,88 @@
   2 DATE 18 February 1957
 1 FAMS @F0059@
 
+0 @I0146@ INDI
+1 NAME Horace /Loudermilk/
+1 SEX M
+1 BIRT
+  2 DATE 22 October 1906
+1 DEAT
+1 FAMC @F0007@
+
+0 @I0147@ INDI
+1 NAME Vance /Loudermilk/
+1 SEX M
+1 BIRT
+  2 DATE 26 October 1908
+1 DEAT
+  2 DATE 11 November 1986
+  2 PLAC Atlanta, Georgia
+1 SSN 252-03-2152
+1 FAMC @F0007@
+
+0 @I0148@ INDI
+1 NAME Lonnie /Loudermilk/
+1 SEX M
+1 BIRT
+  2 DATE 20 February 1911
+1 DEAT
+  2 DATE March 1979
+  2 PLAC Atlanta, Georgia
+1 SSN 259-26-4706
+1 FAMC @F0007@
+
+0 @I0149@ INDI
+1 NAME Clint /Loudermilk/
+1 SEX M
+1 BIRT
+  2 DATE 1 October 1913
+1 DEAT
+1 FAMC @F0007@
+
+0 @I0150@ INDI
+1 NAME Glenn /Loudermilk/
+1 SEX M
+1 BIRT
+  2 DATE 12 February 1915
+1 DEAT
+  2 DATE May 1979
+  2 PLAC Atlanta, Georgia
+1 SSN 256-16-2924
+1 FAMC @F0007@
+
+0 @I0151@ INDI
+1 NAME Bennie /Loudermilk/
+1 SEX M
+1 BIRT
+  2 DATE 22 July 1918
+1 DEAT
+  2 DATE September 1985
+1 SSN 256-18-2934
+1 FAMC @F0007@
+
+0 @I0152@ INDI
+1 NAME Curtiss /Loudermilk/
+1 SEX F
+1 BIRT
+  2 DATE 15 June 1921
+1 DEAT
+1 FAMC @F0007@
+
+0 @I0153@ INDI
+1 NAME Ryburn /Loudermilk/
+1 SEX M
+1 BIRT
+1 DEAT
+1 FAMC @F0007@
+
+0 @I0154@ INDI
+1 NAME Stephen Rayford /Loudermilk/
+1 SEX M
+1 BIRT
+  2 DATE 22 January 1946
+  2 PLAC Brunswick, Georgia
+1 DEAT
+1 FAMC @F0004@
 
 
 
@@ -1414,6 +1502,7 @@
   2 DATE 21 June 1943
   2 PLAC Brunswick, Georgia
 1 CHIL @I0003@
+1 CHIL @I0154@
 
 0 @F0005@ FAM
 1 HUSB @I0011@
@@ -1430,9 +1519,19 @@
 1 CHIL @I0023@
 
 0 @F0007@ FAM
+1 MARR
+  2 DATE 8 October 1905
 1 HUSB @I0015@
 1 WIFE @I0016@
 1 CHIL @I0009@
+1 CHIL @I0146@
+1 CHIL @I0147@
+1 CHIL @I0148@
+1 CHIL @I0149@
+1 CHIL @I0150@
+1 CHIL @I0151@
+1 CHIL @I0152@
+1 CHIL @I0153@
 
 0 @F0008@ FAM
 1 HUSB @I0017@
