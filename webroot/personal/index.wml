@@ -3,123 +3,15 @@
 
 <title "About Joel">
 
-<heading>About me</heading>
+<heading><a href="aboutme.html">About me</a></heading>
 
-<p>I'm currently employed as a UNIX Systems Administrator for
-<a href="http://www.fedex.com/">FedEx</a> in Orlando, Florida. Actually,
-IT, Sales, and Marketing are part of a separate company called FedEx Services,
-but no one outside the company really cares about that distinction
-(although I did find
-<a href="http://www.fedex.com/us/about/overview/companies/services/">a page</a>
-about FedEx Services on the public web site).</p>
-
-<p>I've worked for FedEx since 1998, when I graduated from the
-<a href="http://www.ufl.edu/">University of Florida</a> with a BS in
-Computer Engineering. While in school, I worked as a UNIX Systems
-Administrator for a Gainesville ISP called Mercury Communications, which
-is no longer in business. While there, I learned an incredible amount
-about UNIX and Internet services from <a href="http://www.ulmer.org/">Steve
-Ulmer</a> (more on him below).</p>
-
-<p>In 2000, Michele and I got married in downtown Orlando. We've even got
-<a href="http://www.home.loudermilk.org/gallery/wedding">some of the
-pictures</a> online. Michele now works in Lake Mary for
-<a href="http://www.wellsfargo.com/mortgage/">Wells Fargo Home
-Mortgage</a>.</p>
+<p>Some information about me. That <i>is</i> why you came here, right?</p>
 
 <br />
 
-<heading>Family</heading>
+<heading><a href="$(ROOT)/genealogy/">Genealogy</a></heading>
 
-<p>All of my immediate family live in the central Florida area. I grew up
-in <a href="http://www.lakeland.net/">Lakeland</a>, which is in between
-Tampa and Orlando, but we've all since moved away. My parents have retired to
-Holmes Beach on Anna Maria Island, near Bradenton. My brother Richie lives in
-Sarasota where he's a
-<a href="http://www.abelband.com/attorneys2.cfm/ID/58">litigation attorney</a>
-for <acronym title="Abel, Band, Russell, Collier, Pitchford & Gordon, \
-Chartered">a law firm with a very long name</acronym>. My sister Leah also
-lives in Orlando, where she works as a Group Sales Coordinator for
-<a href="http://www.wetnwild.com/Orlando/Main/Main.asp">Wet 'n Wild</a>, a
-water park.</p>
-
-<br />
-
-<heading>Friends</heading>
-
-<p>Here are links to some of my friends who have web sites of their own.</p>
-
-<dl>
-
-<dt><a href="http://web.tampabay.rr.com/mafight/">Mark Fight</a></dt>
-<dd>Mark and I went to high school and college together. He now lives in
-Lakeland and works as a web designer for the Lakeland-based law firm
-<a href="http://www.hklaw.com/">Holland and Knight.</a></dd>
-
-<br />
-
-<dt><a href="http://mywebpages.comcast.net/nrollins/">Noah Rollins</a></dt>
-<dd>Noah and I also went to high school and college together. He works in
-Boston as an architect for <a href="http://www.wilsonarch.com/">William
-Wilson Associated Arhitects</a>. He has a masters degree from Harvard, which
-means he's wicked smart (or at least has a piece of paper from Harvard that
-says he is).</dd>
-
-<br />
-
-<dt><a href="http://www.ulmer.org/">Steve Ulmer</a></dt>
-<dd>Back in college, I got my first job as a UNIX systems administrator
-working for Steve at the now-defunct ISP Mercury Communications. Steve
-taught me a ton about UNIX, and if it weren't for him, I wouldn't have
-been able to get my current job after I graduated. Shortly after I left
-Mercury, Steve went to work for the University of Florida, where he's
-how the technical lead for <a href="http://www.nerdc.ufl.edu/">NERDC</a>'s
-<a href="http://open-systems.ufl.edu/">Open Systems Group</a>.</dd>
-
-<br />
-
-<dt><a href="http://www.pcunicorn.com/">Doug Walsh</a></dt>
-<dd>Doug is a coworker at FedEx. His web site is run somewhat impressively on
-a massive collection of old, slow <acronym title="the processor inside older \
-HP UNIX systems">PA-RISC</acronym> and <acronym title="the processor inside \
-Sun's UNIX systems">SPARC</acronym> hardware that he has
-somehow breathed new life into, and generates the most heat and noise of
-any site I've ever seen.</dd>
-
-<br />
-
-<dt><a href="http://www.rollinghillsobs.org/">Shawn Dvorak</a></dt>
-<dd>I also work with Shawn, who is a UNIX guru and serious astronomer --
-serious enough that he
-<a href="http://www.rollinghillsobs.org/history.html">built an observatory</a>
-in his backyard. (Beware, though, he's shirtless in one of the pictures.)
-Shawn was also the winner (if you can call it that) of
-<a href="$(ROOT)/milk/">the milk bet</a>.</dd>
-
-<br />
-
-<dt><a href="http://www.eiv.com/">Shawn McMahon</a></dt>
-<dd>FedEx coworker and Linux zealot, Shawn could probably retire if he sold
-his three-letter .com domain name.</dd>
-
-<br />
-
-<dt><a href="http://www.etron.org/">Etienne Tron</a></dt>
-<dd>Another coworker, ET has mad Counter-Strike skillz. One of his home
-systems has neon lights inside and a big window in the side of the case.</dd>
-
-<br />
-
-<dt><a href="http://www.johnmcelroy.com/">John McElroy</a></dt>
-<dd>John and I go all the way back to junior high. We lived together in
-college, too, when John was a Music major. He's since changed his career
-path and has a Masters in Computer Science and is working on his Ph.D.</dd>
-
-<br />
-
-<dt><a href="http://www.phurious-george.com/">Phil Whitt</a></dt>
-<dd>Phil is another old pal from junior high and high school in Lakeland.
-When he's not causing mischief, he's working on a degree in Electrical
-Engineering at UF.</dd>
-
-</dl>
+<p>I'm collecting genealogical information about my family (and also my
+wife's family) and making it available on the web. I'm not much of a
+researcher -- I'm just assembling information that others have already
+collected.</p>
