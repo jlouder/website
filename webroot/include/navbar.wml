@@ -32,6 +32,6 @@
 <define-tag navbar>
   <if "$(topic)"
     <undivert divnum="<add <array-member topics $(topic) /> 1 />" />
-    ""
+    "&nbsp;"
   />
 </define-tag>
