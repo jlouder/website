@@ -1,0 +1,97 @@
+# $Id$
+#include <template.wml> topic="software"
+
+<title "Joel's software: the web site">
+
+<heading>History</heading>
+
+<p>It's been high time to retire the old site design (if you can call it
+a design) for quite some time. Years ago, someone told me about a program
+called <a href="http://www.thewml.org/">WML</a>, Website Meta Language. It's
+how a programmer would put a site together -- out of source files that get
+compiled into <tt>.html</tt> files.</p>
+
+<p>The problem is that it's hard to understand how to put a site together
+with WML. There's plenty of documentation on how to use WML, but in true
+UNIX fashion, it's made up of small, reuseable tools, which on their own
+aren't incredibly useful to me in building a web site. And the documentation
+is a very detailed instruction manual on these small tools. Most of the
+examples for using a feature are terribly trivial -- unless the purpose of
+your site is to perform transformations on the words foo, bar, and quux,
+then you're going to have a hard time understanding how to use WML to build
+your site.</p>
+
+<p>Luckily, the folks at <a href="http://www.debian.org/">Debian</a> use
+WML to manage their site. They've got a
+<a href="http://www.debian.org/devel/website/using_wml">page about using
+WML</a> (which even says that it's hard to learn from the documentation),
+and better yet, the
+<a href="http://cvs.debian.org/webwml/english/?cvsroot=webwml#dirlist">source
+code</a> for their web site is available. Finally, there was something I could
+learn from.</p>
+
+<br />
+
+<heading>WML Features</heading>
+
+<p>There are tons and tons of WML features, and I'm only using a handful of
+them. But I've listed them here both to show how useful WML is and to
+serve as a guide in case you'd like to use WML.</p>
+
+<p><b>Include pre-processor.</b> Much like <tt>cpp</tt>, WML understands
+the <tt>#include</tt> directive. You can even pass arguments to it. At the
+top of this page is the directive:
+
+<screen>#include &lt;template.wml&gt; topic="software"</screen>
+
+This puts the images at the top of the page, and setting the <tt>topic</tt>
+variable tells the template that the navigation bar should show all the
+choices for the software section. This eliminates typing redundant HTML
+on every page. Not to mention saving tons of time if you want to give the
+site a facelift.</p>
+
+<br />
+
+<p><b>Create your own tags.</b> I've defined a couple of tags to make
+writing pages easier. For example the box above that says "WML Features"
+looks neat, but it's a table-within-a-table HTML construct that would be messy
+to write every time. But all I write is:
+
+<screen>&lt;heading&gt;WML Features&lt;/heading&gt;</screen>
+
+Another example is all the fixed-width text I'm using on this page, done
+with the <tt>&lt;screen&gt;</tt> tag. Not only do these tags save
+time when writing the pages, they make it trivial to change the look
+of the site. All these tags are defined in
+<tt><a href="http://www.home.loudermilk.org/cgi-bin/viewcvs.cgi/website/\
+             webroot/include/tags.wml?rev=HEAD&\
+             content-type=text/vnd.viewcvs-markup">tags.wml</a></tt>, if
+you'd like to have a look.</p>
+
+<br />
+
+<p><b>Auto-adjusted pathnames.</b> I like to put all my images in one
+directory, even though they're referenced by pages in several directories.
+Depending on where the image is referenced from, there might be several
+different pathnames for the same image. I could just use the absolute
+path <tt>/images</tt>, but then the site won't work in a subdirectory (useful
+for testing out changes). And I can't use relative paths everywhere
+because there are templates that reference images that get included from
+different directories. The solution -- WML lets me put this in my
+<tt>.wmlrc</tt> at the top-level directory:
+
+<screen>-D IMAGES~images</screen>
+
+This means that the variable <tt>IMAGES</tt> gets assigned the pathname
+of <tt>images</tt> directory, auto-adjusted from whatever directory WML
+is in when it finds a reference to <tt><protect>$(IMAGES)</protect></tt>.
+So I can safely refer to the images directory from any place in the site,
+and I don't have to use an absolute URL.</p>
+
+<br />
+
+<heading>Source code</heading>
+
+<p>If you'd like to see how the entire site fits together, take a look at
+<a href="http://www.home.loudermilk.org/cgi-bin/viewcvs.cgi/website/#dirlist">\
+the website module</a> in CVS.</p>
