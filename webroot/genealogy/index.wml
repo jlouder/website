@@ -18,8 +18,8 @@ their spouse (former spouses are noted), their children, their siblings,
 their parents, and their grandparents. The person whose tree you've
 drawn is shown with a red box around their name. You can make anyone else
 on the screen the new center of the tree by clicking on the tree
-icon (<img src="tree.gif">) next to their name. Eventually, you'll be able
-to a "details" page on each person, but that's not implemented yet.
+icon (<img src="tree_beige.gif">) next to their name. Eventually, you'll be able
+to get a "details" page for each person, but that's not implemented yet.
 Birth years aren't shown for people who are still alive, to offer some
 protection for those who are modest about their age.</p>
 
@@ -57,7 +57,7 @@ exactly how I'd like them to.</p>
 <p>This is very much a work in progress. In addition to adding more people
 to the tree, I intend to make everyone's names clickable, which will bring up
 a page with details about that person. The details will include basic
-information like when the person was born, married, or died, but also will
+information like when the person was born, married, or died, and also will
 have pictures of the person or documents related to the person. I've got a
 box full of old pictures, newspaper clippings, and documents, and I intend
 to scan them all and attach them to the relevant people in the tree. But
