@@ -210,7 +210,7 @@ sub PersonCell {
   } else {
     $html .= Name($individual);
 
-    $html .= '<br><a href="' . $ENV{'SCRIPT_URI'} . '?id=' .
+    $html .= '<br><a href="' . CGI::script_name() . '?id=' .
              $individual->{xref} . '"><img alt="recenter tree here" ' .
              'border="0" ' . "src=\"${imageUrl}tree.gif\"></a>";
 
@@ -246,7 +246,7 @@ sub PreviousMarriageCell {
              "<tr><td height=\"$height\">Other marriages:<br>";
   foreach my $fam ( @prevFamilies ) {
     my $spouse = $individual->sex() eq 'M' ? $fam->wife() : $fam->husband();
-    $html .= "<a href=\"" . $ENV{'SCRIPT_URI'} . "?id=" .
+    $html .= "<a href=\"" . CGI::script_name() . "?id=" .
              $individual->{xref} . "&fam=" . $fam->{xref} . "\">" .
              Name($spouse) . "</a><br>";
   }
@@ -333,7 +333,7 @@ sub PersonSelectorPage($) {
         "\n<ul>\n";
 
   foreach my $ind ( @individuals ) {
-    print "<li><a href=\"", $ENV{'SCRIPT_URI'}, '?id=', $ind->{xref}, "\">",
+    print "<li><a href=\"", CGI::script_name(), '?id=', $ind->{xref}, "\">",
           NameWithLastFirst($ind), "</a>";
 
     if( !IsAlive($ind) ) {
