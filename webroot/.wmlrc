@@ -2,3 +2,5 @@
 -D IMAGES~images
 -D SOFTWARE~software
 -D CHARTS~charts
+-D VOICE~voice
+-D PERSONAL~personal
