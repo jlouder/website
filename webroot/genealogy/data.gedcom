@@ -17,6 +17,7 @@
   2 PLAC First Presbyterian Church, Orlando, FL
 1 FAMC @F0002@
 1 FAMS @F0001@
+1 NOTE Lives in Altamonte Springs, Florida
 1 OBJE
   2 FORM jpeg
   2 FILE 1.jpg
@@ -32,6 +33,7 @@
 1 BIRT
   2 DATE 7 December 1975
   2 PLAC Atlanta, Georgia
+1 NOTE Lives in Altamonte Springs, Florida
 1 FAMC @F0011@
 1 FAMS @F0001@
 
@@ -158,6 +160,7 @@
 1 SEX M
 1 BIRT
 1 DEAT
+1 FAMC @F0050@
 1 FAMS @F0007@
 
 0 @I0016@ INDI
@@ -165,6 +168,7 @@
 1 SEX F
 1 BIRT
 1 DEAT
+1 FAMC @F0051@
 1 FAMS @F0007@
 
 0 @I0017@ INDI
@@ -175,10 +179,11 @@
 1 FAMS @F0008@
 
 0 @I0018@ INDI
-1 NAME Maude Marie Gordon Stephens Lane /Rum/
+1 NAME Maude Marie Gordon Stephens Lane /Rumley/
 1 SEX F
 1 BIRT
 1 DEAT
+1 FAMC @F0052@
 1 FAMS @F0008@
 
 0 @I0019@ INDI
@@ -188,6 +193,7 @@
   2 DATE 22 January 1875
 1 DEAT
   2 DATE 6 November 1964
+1 FAMC @F0055@
 1 FAMS @F0009@
 
 0 @I0020@ INDI
@@ -211,6 +217,7 @@
 1 SEX F
 1 BIRT
 1 DEAT
+1 FAMC @F0054@
 1 FAMS @F0010@
 
 0 @I0023@ INDI
@@ -227,6 +234,7 @@
   2 DATE 14 August 1938
   2 PLAC Atlanta, Georgia
 1 OCCU Pharmacist
+1 NOTE Lives in Jamestown, North Carolina
 1 FAMC @F0012@
 1 FAMS @F0011@
 1 FAMS @F0026@
@@ -307,8 +315,9 @@
 1 NAME Mia Charlene /Murphy/
 1 SEX F
 1 BIRT
-  2 DATE 19 February 1980
+  2 DATE 19 February 1981
   2 PLAC Greensboro, North Carolina
+1 NOTE Lives in Lakeland, Florida
 1 FAMC @F0011@
 
 0 @I0031@ INDI
@@ -387,6 +396,7 @@
 1 SEX M
 1 BIRT
   2 DATE 12 September 1925
+1 NOTE Lives in Burgaw, North Carolina
 1 FAMC @F0016@
 1 FAMS @F0027@
 
@@ -459,8 +469,9 @@
 1 DEAT
   2 DATE 16 March 1985
 1 BURI
-  2 PLAC Black River Presbyterian Church cemetery near Burgaw, North Carolina
+  2 PLAC Black River Presbyterian Church Cemetery near Burgaw, North Carolina
 1 FAMC @F0013@
+1 FAMS @F0049@
 
 0 @I0044@ INDI
 1 NAME James Archibald /Murphy/
@@ -552,8 +563,8 @@
 1 DEAT
   2 DATE 1852
 1 NOTE Cornelius Neil Murphy married Margaret Hendry. Cornelius is the son
-  2 CONT of Finlay Murphy. Margaret is the granddaughter of Patrick Murphy,
-  2 CONT Finlay's brother.
+  2 CONT of Finla Murphy. Margaret is the granddaughter of Patrick Murphy,
+  2 CONT Finla's brother.
 1 FAMC @F0022@
 1 FAMS @F0021@
 
@@ -565,13 +576,13 @@
 1 DEAT
   2 DATE 1866
 1 NOTE Cornelius Neil Murphy married Margaret Hendry. Cornelius is the son
-  2 CONT of Finlay Murphy. Margaret is the granddaughter of Patrick Murphy,
-  2 CONT Finlay's brother.
+  2 CONT of Finla Murphy. Margaret is the granddaughter of Patrick Murphy,
+  2 CONT Finla's brother.
 1 FAMC @F0023@
 1 FAMS @F0021@
 
 0 @I0054@ INDI
-1 NAME Finlay /Murphy/
+1 NAME Finla /Murphy/
 1 SEX M
 1 BIRT
   2 DATE 1728
@@ -635,7 +646,7 @@
 1 FAMS @F0025@
 
 0 @I0061@ INDI
-1 NAME Unknown /Unknown/
+1 NAME Mother of Patrick Murphy /Unknown/
 1 SEX F
 1 BIRT
 1 DEAT
@@ -646,6 +657,7 @@
 1 SEX F
 1 BIRT
   2 DATE 3 November 1943
+1 NOTE Lives in Jamestown, North Carolina
 1 FAMS @F0026@
 
 0 @I0063@ INDI
@@ -653,6 +665,7 @@
 1 SEX F
 1 BIRT
   2 DATE 10 March 1930
+1 NOTE Lives in Burgaw, North Carolina
 1 FAMS @F0027@
 
 0 @I0064@ INDI
@@ -1068,6 +1081,7 @@
   2 DATE 14 September 1956
 1 NOTE Lives in Fayetteville, North Carolina
 1 FAMC @F0044@
+1 FAMS @F0046@
 
 0 @I0111@ INDI
 1 NAME William Currie /McFadyen/
@@ -1077,6 +1091,7 @@
   2 DATE 14 February 1961
 1 NOTE Lives in Fayetteville, North Carolina
 1 FAMC @F0044@
+1 FAMS @F0047@
 
 0 @I0112@ INDI
 1 NAME John Scott /McFadyen/
@@ -1085,6 +1100,7 @@
   2 DATE 11 June 1964
 1 NOTE Lives in Fayetteville, North Carolina
 1 FAMC @F0044@
+1 FAMS @F0048@
 
 0 @I0113@ INDI
 1 NAME General John Milton /Rose/
@@ -1093,6 +1109,192 @@
   2 DATE 17 June 1923
 1 FAMS @F0045@
 
+0 @I0114@ INDI
+1 NAME Ramona /Phillips/
+1 SEX F
+1 BIRT
+  2 DATE 1 January 1956
+1 NOTE Lives in Fayetteville, North Carolina
+1 FAMS @F0046@
+
+0 @I0115@ INDI
+1 NAME Jennifer Ryan /McFadyen/
+1 SEX F
+1 BIRT
+  2 DATE 4 October 1984
+1 FAMC @F0046@
+
+0 @I0116@ INDI
+1 NAME Susanna /Hudson/
+1 SEX F
+1 BIRT
+  2 DATE 14 October 1965
+1 NOTE Lives in Fayetteville, North Carolina
+1 FAMS @F0047@
+
+0 @I0117@ INDI
+1 NAME Brenda Margaret /McFadyen/
+  2 NICK Maggie
+1 SEX F
+1 BIRT
+  2 DATE 8 April 1998
+1 NOTE Lives in Fayetteville, North Carolina
+1 FAMC @F0047@
+
+0 @I0118@ INDI
+1 NAME James Fleetwood /McFadyen/
+1 SEX M
+1 BIRT
+  2 DATE 30 November 1999
+1 NOTE Lives in Fayetteville, North Carolina
+1 FAMC @F0047@
+
+0 @I0119@ INDI
+1 NAME William Hudson /McFadyen/
+1 SEX M
+1 BIRT
+  2 DATE 1 November 2002
+1 NOTE Lives in Fayetteville, North Carolina
+1 FAMC @F0047@
+
+0 @I0120@ INDI
+1 NAME Brenda /Carter/
+1 SEX F
+1 BIRT
+  2 DATE 17 May 1966
+1 FAMS @F0048@
+
+0 @I0121@ INDI
+1 NAME John Carter /McFadyen/
+1 SEX M
+1 BIRT
+  2 DATE 10 September 1994
+1 NOTE Lives in Fayetteville, North Carolina
+1 FAMC @F0048@
+
+0 @I0122@ INDI
+1 NAME James Alexander /McFadyen/
+1 SEX M
+1 BIRT
+  2 DATE 7 November 1995
+1 NOTE Lives in Fayetteville, North Carolina
+1 FAMC @F0048@
+
+0 @I0123@ INDI
+1 NAME Alice Hill /Reeves/
+1 SEX F
+1 BIRT
+  2 DATE 17 July 1914
+1 DEAT
+  2 DATE 6 June 2002
+1 BURI
+  2 PLAC Black River Presbyterian Church cemetery
+1 NOTE Alice Hill Reeves is a descendent of Patrick Murphy.
+1 NOTE Florence Corbett, who was married to John Alexander Murphy (no
+  2 CONT children), was Alice Hill Reeves' great aunt.
+1 FAMS @F0049@
+
+0 @I0124@ INDI
+1 NAME Priscilla /Murphy/
+1 SEX F
+1 BIRT
+  2 DATE 25 October 1952
+1 BAPM
+  2 PLAC Black River Presbyterian Church
+1 NOTE Lives in Beaufort, North Carolina
+1 NOTE Priscilla's ancestors attended Black River Presbyterian Church.
+1 NOTE Priscilla is twice a descendent of Patrick Murphy and once of Finla.
+  2 CONT Murphy
+1 FAMC @F0049@
+
+0 @I0125@ INDI
+1 NAME Colonel Spencer /Loudermilk/
+1 SEX M
+1 BIRT
+1 DEAT
+1 FAMS @F0050@
+
+0 @I0126@ INDI
+1 NAME Mother of Allen Philip Loudermilk /Unknown/
+1 SEX F
+1 BIRT
+1 DEAT
+1 FAMS @F0050@
+
+0 @I0127@ INDI
+1 NAME Joseph Hamilton /Nix/
+1 SEX M
+1 BIRT
+1 DEAT
+1 FAMS @F0051@
+
+0 @I0128@ INDI
+1 NAME Mother of Nellie Belle Nix /Unknown/
+1 SEX F
+1 BIRT
+1 DEAT
+1 FAMS @F0051@
+
+0 @I0129@ INDI
+1 NAME Richard Carlton /Gordon/
+1 SEX M
+1 BIRT
+1 DEAT
+1 FAMS @F0052@
+
+0 @I0130@ INDI
+1 NAME Helen Rose /George/
+1 SEX F
+1 BIRT
+1 DEAT
+1 FAMC @F0053@
+1 FAMS @F0052@
+
+0 @I0131@ INDI
+1 NAME Minnie Walters /George/
+1 SEX F
+1 BIRT
+1 DEAT
+1 FAMS @F0053@
+
+0 @I0132@ INDI
+1 NAME Father of Helen Rose George /Unknown/
+1 SEX M
+1 BIRT
+1 DEAT
+1 FAMS @F0053@
+
+0 @I0133@ INDI
+1 NAME Frank /Dollar/
+1 SEX M
+1 BIRT
+1 DEAT
+1 FAMS @F0054@
+
+0 @I0134@ INDI
+1 NAME Lizzie /Johnson/
+1 SEX F
+1 BIRT
+1 DEAT
+1 FAMS @F0054@
+
+0 @I0135@ INDI
+1 NAME Joseph Jolly /Kennedy/
+1 SEX M
+1 BIRT
+  2 DATE 1842
+1 DEAT
+  2 DATE 1900
+1 FAMS @F0055@
+
+0 @I0136@ INDI
+1 NAME Sarah Elizabeth /Franks/
+1 SEX F
+1 BIRT
+  2 DATE 1846
+1 DEAT
+  2 DATE 1891
+1 FAMS @F0055@
 
 
 
@@ -1172,7 +1374,7 @@
 
 0 @F0011@ FAM
 1 MARR
-  2 DATE 1974
+  2 DATE September 1974
 1 DIV
   2 DATE 1989
 1 HUSB @I0024@
@@ -1419,5 +1621,69 @@
 1 MARR
 1 HUSB @I0113@
 1 WIFE @I0108@
+
+0 @F0046@ FAM
+1 MARR
+1 HUSB @I0110@
+1 WIFE @I0114@
+1 CHIL @I0115@
+
+0 @F0047@ FAM
+1 MARR
+1 HUSB @I0111@
+1 WIFE @I0116@
+1 CHIL @I0117@
+1 CHIL @I0118@
+1 CHIL @I0119@
+
+0 @F0048@ FAM
+1 MARR
+1 HUSB @I0112@
+1 WIFE @I0120@
+1 CHIL @I0121@
+1 CHIL @I0122@
+
+0 @F0049@ FAM
+1 MARR
+  2 DATE 18 January 1947
+1 HUSB @I0043@
+1 WIFE @I0123@
+1 CHIL @I0124@
+
+0 @F0050@ FAM
+1 MARR
+1 HUSB @I0125@
+1 WIFE @I0126@
+1 CHIL @I0015@
+
+0 @F0051@ FAM
+1 MARR
+1 HUSB @I0127@
+1 WIFE @I0128@
+1 CHIL @I0016@
+
+0 @F0052@ FAM
+1 MARR
+1 HUSB @I0129@
+1 WIFE @I0130@
+1 CHIL @I0018@
+
+0 @F0053@ FAM
+1 MARR
+1 HUSB @I0132@
+1 WIFE @I0131@
+1 CHIL @I0130@
+
+0 @F0054@ FAM
+1 MARR
+1 HUSB @I0133@
+1 WIFE @I0134@
+1 CHIL @I0022@
+
+0 @F0055@ FAM
+1 MARR
+1 HUSB @I0135@
+1 WIFE @I0136@
+1 CHIL @I0019@
 
 0 TRLR
