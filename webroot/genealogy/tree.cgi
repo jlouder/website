@@ -326,10 +326,12 @@ sub PersonSelectorPage($) {
   # sort people based on last,first name
   my @individuals = sort { NameWithLastFirst($a) cmp NameWithLastFirst($b) }
                       $ged->individuals();
+  my $count = $#individuals + 1;
 
   print header(), StartHTML('Select a person'),
         "<p>Select a person to be the center of the tree. This person's ",
         "children, siblings, parents, and grandparents will be shown.</p>",
+        "<p>There are $count people in the tree.</p>",
         "\n<ul>\n";
 
   foreach my $ind ( @individuals ) {
