@@ -1,3 +1,4 @@
+-W 2,-X3338
 -D ROOT~.
 -D IMAGES~images
 -D SOFTWARE~software
