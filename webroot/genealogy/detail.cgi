@@ -2,7 +2,7 @@
 # $Id$
 
 # where the libraries are installed at he.net
-use lib '/home/jlouder/perl/lib.6/site-perl';
+use lib '/home/jlouder/perl/lib/perl5/site_perl/5.8.0';
 
 # common functions and configuration
 require 'common.pl';
