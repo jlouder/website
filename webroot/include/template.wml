@@ -10,11 +10,27 @@
 <title>{#TITLE#}</title>
 </head>
 
+<map name="topbarmap">
+  <area shape="rect" coords="213,45,260,70" alt="about" \
+        href="$(PERSONAL)" />
+  <area shape="rect" coords="277,46,336,70" alt="pictures" \
+        href="http://www.home.loudermilk.org/gallery/" />
+  <area shape="rect" coords="353,45,416,71" alt="software" \
+        href="$(SOFTWARE)/" />
+  <area shape="rect" coords="431,44,537,71" alt="charts" \
+        href="$(CHARTS)/" />
+  <area shape="rect" coords="553,45,634,70" alt="voice" \
+        href="$(VOICE)/" />
+  <area shape="rect" coords="650,45,705,70" alt="contact" \
+        href="$(ROOT)/contact.html" />
+</map>
+
 <body>
 <center>
 <table border="0" width="750" cellpadding="0" cellspacing="0">
 <tr>
-  <td colspan=4><img src="$(IMAGES)/topbar.gif"></td>
+  <td colspan=4><img src="$(IMAGES)/topbar.gif" border=0 \
+                     usemap="#topbarmap"></td>
 </tr>
 <tr>
   <td width="25"><img src="$(IMAGES)/navbar_left.gif" width="25" height="25"></td>
