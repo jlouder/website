@@ -14,7 +14,7 @@
   2 PLAC Durham, North Carolina
 1 BAPM
   2 DATE 20 February 2000
-  2 PLAC First Presbyterian Church, Orlando, FL
+  2 PLAC First Presbyterian Church, Orlando, Florida
 1 FAMC @F0002@
 1 FAMS @F0001@
 1 NOTE Lives in Altamonte Springs, Florida
@@ -26,6 +26,7 @@
   2 FORM jpeg
   2 FILE 2.jpg
   2 TITL Another picture of Joel
+1 _WWW http://www.loudermilk.org/
 
 0 @I0002@ INDI
 1 NAME Michele Colleen /Murphy/
@@ -1203,8 +1204,8 @@
   2 PLAC Black River Presbyterian Church
 1 NOTE Lives in Beaufort, North Carolina
 1 NOTE Priscilla's ancestors attended Black River Presbyterian Church.
-1 NOTE Priscilla is twice a descendent of Patrick Murphy and once of Finla.
-  2 CONT Murphy
+1 NOTE Priscilla is twice a descendent of Patrick Murphy and once of Finla
+  2 CONT Murphy.
 1 FAMC @F0049@
 
 0 @I0125@ INDI
@@ -1375,6 +1376,7 @@
 0 @F0011@ FAM
 1 MARR
   2 DATE September 1974
+  2 PLAC New Hope Baptist Church, Zolfo Springs, Florida
 1 DIV
   2 DATE 1989
 1 HUSB @I0024@
@@ -1471,7 +1473,7 @@
 0 @F0026@ FAM
 1 MARR
   2 DATE 14 April 1995
-  2 PLAC Jamestown, North Carolina
+  2 PLAC Jamestown Presbyterian Church, Jamestown, North Carolina
 1 HUSB @I0024@
 1 WIFE @I0062@
 
