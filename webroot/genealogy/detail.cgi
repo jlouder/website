@@ -1,6 +1,5 @@
-#!/usr/bin/perl5.6.1 -w
+#!/usr/bin/perl -w
 # $Id$
-# ick! but he.net must use perl 5.6.1, because /usr/bin/perl is ancient
 
 # where the libraries are installed at he.net
 use lib '/home/jlouder/perl/lib.6/site-perl';
