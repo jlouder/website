@@ -50,6 +50,7 @@
         <li><a href="$(SOFTWARE)/backups.html">Backups</a></li>
         <li><a href="$(SOFTWARE)/smt.html">smt</a></li>
         <li><a href="$(SOFTWARE)/website.html">Web site</a></li>
+        <li><a href="$(SOFTWARE)/solaris-hpux.html">Solaris vs. HP-UX</a></li>
       </ul>
     </div>
 

@@ -49,3 +49,9 @@ useful if your notifications go to a pager or mobile phone.</p>
 code using <a href="http://www.thewml.org/">Website Meta Language</a> (WML).
 It took me so long to understand how to use WML that I feel compelled to
 devote a page to sharing how the site is constructed.</p>
+
+<h3><a href="solaris-hpux.html">Solaris vs. HP-UX</a></h3>
+
+<p>This qualifies for the "software" section of my site better than any other
+&mdash; an explanation of why I believe <a href="solaris-hpux.html">Solaris
+is a better operating system than HP-UX</a>.</p>
