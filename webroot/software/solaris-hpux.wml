@@ -1,6 +1,12 @@
 # $Id$
 #include <template.wml> topic="software"
 
+<localstyle>
+.underline {
+  text-decoration: underline;
+}
+</localstyle>
+
 <title "Solaris versus HP-UX">
 
 <heading>Solaris versus HP-UX</heading>
@@ -96,8 +102,8 @@ paths for devices all day without realizing that 0/1/1/0.1.0 is a disk and
 /devices/pci@1f,4000/scsi@3/sd@0,0:a for the disk and
 /devices/pseudo/clone@0:hme for the network adapter. These seem just as
 arbitrary at first, but there are clues in the pathnames: "sd" is the driver
-for <u>S</u>CSI <u>d</u>isks, and "hme" is the driver for
-<u>h</u>undred-<u>m</u>egabit <u>E</u>thernet NICs.</p>
+for <span class="underline">S</span>CSI <span class="underline">d</span>isks, and "hme" is the driver for
+<span class="underline">h</span>undred-<span class="underline">m</span>egabit <span class="underline">E</span>thernet NICs.</p>
 
 <p><img src="$(IMAGES)/x.gif" /> <strong>No single command to shut down and power off.</strong>
 In Solaris, an <tt>init 5</tt> will shut down and power off, and an <tt>init
