@@ -149,6 +149,12 @@ one, so you always know how much log information you have. With HP-UX, you
 may have a little or you may have a lot. You'll probably never know until
 you need some old information and don't have it.</p>
 
+<p><img src="$(IMAGES)/x.gif" /> <strong>Sendmail configuration is
+painful.</strong> HP-UX doesn't give you the m4 configuration files for
+sendmail so that you can use the m4 macros to generate a <tt>sendmail.cf</tt>.
+Instead, they expect you to hack <tt>sendmail.cf</tt> directly. This is not
+the way sendmail is intended to be configured.</p>
+
 <p><img src="$(IMAGES)/x.gif" /> <strong>Load average calculations are
 different.</strong> In HP-UX, unlike Solaris, Linux, or just about any other
 UNIX, load averages reported by <tt>uptime</tt> are divided by the number of
