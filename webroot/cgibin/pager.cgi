@@ -23,7 +23,7 @@ my $subject = "Web message from: $remote_host";
 # send the message to my pager
 open SENDMAIL, "|/usr/bin/sendmail -t" or die "Can't run sendmail: $!";
 print SENDMAIL << "__EOF__";
-To: 4073102323\@messaging.sprintpcs.com
+To: 4073102323\@tmomail.net
 Subject: $subject
 
 $message
