@@ -6,9 +6,10 @@
 <p>You can reach me by email at <tt><a href="mailto:joel@loudermilk.org">\
 joel@loudermilk.org</a></tt>.</p>
 
-<p>If you need to send a message immediately, you can send a text message
-to my mobile phone below. Remember to identify yourself in the text of the
-message.
+<p>Alternatively, you can send me a text message by filling out the form
+below. Depending on the time of day this might just email me, so if you
+need to reach me immediately this isn't the best choice. Remember to identify
+yourself in the text of the message.
 
 <div align="center">
 <form action="/cgibin/pager.cgi" method="post">
