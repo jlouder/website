@@ -1,9 +1,11 @@
 #!/usr/bin/perl -w
+# $Id$
 
 use CGI;
 use CGI::Carp qw(fatalsToBrowser);
 use Socket;
 
+$ENV{TZ} = 'US/Eastern';
 my $logfile = '/home/jlouder/pager.log';
 
 my $remote_host = gethostbyaddr(inet_aton($ENV{'REMOTE_ADDR'}), AF_INET) ||
@@ -17,13 +19,22 @@ if( $message =~ /^\S*$/ ) {
   die "Message is blank, not sending.";
 }
 
+# send this to my phone or email depending on what time it is
+my $email_address;
+my $hour = (localtime time)[2];		# 0-23, Eastern time zone
+if( $hour < 8 || $hour >= 22 ) {
+  $email_address = 'joel@loudermilk.org';
+} else {
+  $email_address = '4073102323@tmomail.net';
+}
+
 # prepend the web client's name to the message
 my $subject = "Web message from: $remote_host";
 
 # send the message to my pager
 open SENDMAIL, "|/usr/bin/sendmail -t" or die "Can't run sendmail: $!";
 print SENDMAIL << "__EOF__";
-To: 4073102323\@tmomail.net
+To: $email_address
 Subject: $subject
 
 $message
