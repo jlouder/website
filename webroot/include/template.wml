@@ -65,6 +65,7 @@
         <li><a href="http://www.loudermilk.org/stats/stats.html">Web site stats</a></li>
         <li><a href="http://www.home.loudermilk.org/cgi-bin/nut/upsstats.cgi?host=apcsu700@spoonman&amp;use_celsius=0">UPS</a></li>
         <li><a href="http://www.loudermilk.org/seti/">SETI@home</a></li>
+        <li><a href="http://www.home.loudermilk.org/mrtg/wrt54g_vlan1.html">Cable modem</a></li>
         <li><a href="http://www.home.loudermilk.org/stats/unix.cgi?hostname=group:home">Home systems</a></li>
       </ul>
     </div>
