@@ -25,7 +25,7 @@ my $hour = (localtime time)[2];		# 0-23, Eastern time zone
 if( $hour < 8 || $hour >= 22 ) {
   $email_address = 'joel@loudermilk.org';
 } else {
-  $email_address = '4073102323@tmomail.net';
+  $email_address = '4077483615@mobile.mycingular.net';
 }
 
 # prepend the web client's name to the message
