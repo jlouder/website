@@ -4,6 +4,19 @@
 
 <title "Joel's web site">
 
+<localhead>
+<link rel="alternate" type="application/rss+xml" title="RSS"
+      href="http://jlouder.livejournal.com/data/rss" />
+<link rel="alternate" type="application/atom+xml" title="Atom"
+      href="http://jlouder.livejournal.com/data/atom" />
+<link rel="service.feed" type="application/atom+xml"
+      title="AtomAPI-enabled feed"
+      href="http://www.livejournal.com/interface/atom/feed" />
+<link rel="service.post" type="application/atom+xml"
+      title="Create a new post"
+      href="http://www.livejournal.com/interface/atom/post" />
+</localhead>
+
 <p>Good day, and welcome to my web site. Choose from one of the links to the right.</p>
 
 <br />
