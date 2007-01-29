@@ -11,6 +11,12 @@
 but keeps spammers from using my system to send out more spam. I've noticed
 that RoadRunner does an open relay test on me about once a month, so at least
 they're trying to make sure their customers run secure mail servers.</li>
+<li>Greylisting using
+<a href="http://hcpnet.free.fr/milter-greylist/">milter-greylist</a>. This
+causes mail from servers that haven't talked to my mail server recently to
+be rejected with a temporary failure. The theory is that real mail servers
+will try again, but spam software won't bother. I've been running this since
+mid-2006, and it's cut way down on the spam reaches me.</li>
 <li>Filtering locally-deliverable mail through
 <a href="http://www.spamassassin.org/">SpamAssassin</a>, which tags probable
 spam messages by adding some headers and altering the subject line and
