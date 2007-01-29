@@ -15,6 +15,7 @@
 {#STYLE#}
 </style>
 <title>{#TITLE#}</title>
+{#HEAD#}
 </head>
 
 <body>
@@ -88,9 +89,14 @@
 {#TITLE#:%0:##}
 </define-tag>
 
-# a way to add per-page styles that get stuck in the <head> section
+# a way to add per-page styles that get stuck in the <style> section
 <define-tag localstyle endtag=required>
 {#STYLE#:%body:##}
+</define-tag>
+
+# a way to add per-page content that gets stuck in the <head> section
+<define-tag localhead endtag=required>
+{#HEAD#:%body:##}
 </define-tag>
 
 # everything after here (the real page content) is body
