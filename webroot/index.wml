@@ -15,6 +15,7 @@
 <link rel="service.post" type="application/atom+xml"
       title="Create a new post"
       href="http://www.livejournal.com/interface/atom/post" />
+<meta name="verify-v1" content="uheAPI+d7xVtl+M7Nu5Dp4MbEC+7prbFw+kCf3rm6+g=" />
 </localhead>
 
 <p>Good day, and welcome to my web site. Choose from one of the links to the right.</p>
