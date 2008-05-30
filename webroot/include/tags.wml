@@ -24,7 +24,7 @@
   <preserve cvsroot />
   <preserve file />
   <set-var %attributes />
-  <if <get-var cvsroot /> "" <set-var cvsroot=/export/cvs /> />
+  <if <get-var cvsroot /> "" <set-var cvsroot=/export/family/cvs /> />
   <include command="$(ROOT)/../pod2html.sh <get-var cvsroot /> <get-var file />" />
   <restore file />
   <restore cvsroot />
