@@ -8,6 +8,11 @@ use Socket;
 $ENV{TZ} = 'US/Eastern';
 my $logfile = '/home/jlouder/pager.log';
 
+# hosts we don't want messages from, period
+my %blacklisted_hosts = map { $_ => 1 } qw(
+  static.162.198.46.78.clients.your-server.de
+);
+
 my $remote_host = gethostbyaddr(inet_aton($ENV{'REMOTE_ADDR'}), AF_INET) ||
                   $ENV{'REMOTE_ADDR'};
 
@@ -31,8 +36,13 @@ if( $hour < 8 || $hour >= 22 ) {
 # prepend the web client's name to the message
 my $subject = "Web message from: $remote_host";
 
+# If the sender is blacklisted, send the message to /dev/null, but make
+# it look like it was sent.
+my $sendmail = defined $blacklisted_hosts{$remote_host} ?
+  '>/dev/null' : '|/usr/bin/sendmail -t';
+
 # send the message to my pager
-open SENDMAIL, "|/usr/bin/sendmail -t" or die "Can't run sendmail: $!";
+open SENDMAIL, $sendmail or die "Can't open $sendmail: $!";
 print SENDMAIL << "__EOF__";
 To: $email_address
 Subject: $subject
