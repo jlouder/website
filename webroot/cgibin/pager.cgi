@@ -11,6 +11,7 @@ my $logfile = '/home/jlouder/pager.log';
 # hosts we don't want messages from, period
 my %blacklisted_hosts = map { $_ => 1 } qw(
   static.162.198.46.78.clients.your-server.de
+  static.142.88.46.78.clients.your-server.de
 );
 
 my $remote_host = gethostbyaddr(inet_aton($ENV{'REMOTE_ADDR'}), AF_INET) ||
