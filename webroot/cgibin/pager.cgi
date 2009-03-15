@@ -25,14 +25,8 @@ if( $message =~ /^\S*$/ ) {
   die "Message is blank, not sending.";
 }
 
-# send this to my phone or email depending on what time it is
-my $email_address;
-my $hour = (localtime time)[2];		# 0-23, Eastern time zone
-if( $hour < 8 || $hour >= 22 ) {
-  $email_address = 'joel@loudermilk.org';
-} else {
-  $email_address = '4077483615@mobile.mycingular.net';
-}
+# always send this to my email, never to the phone
+my $email_address = 'joel@loudermilk.org';
 
 # prepend the web client's name to the message
 my $subject = "Web message from: $remote_host";
