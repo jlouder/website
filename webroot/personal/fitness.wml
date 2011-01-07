@@ -136,7 +136,7 @@ only outdoor runs.</p>
 
 <ul>
 <: foreach my $year ( 2008 .. ((localtime(time))[5]+1900) ) { _:>
-  <li><:= $year :>: <:= milesRunInYear($year) :></li>
+  <li><:= $year :>: <:= milesRunInYear($year) :> miles</li>
 <: } :>
 </ul>
 
