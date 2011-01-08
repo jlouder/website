@@ -145,7 +145,7 @@ only outdoor runs.</p>
 <p>I run a long run once a week, usually on the weekend. Lately these have
 been about 12-13 miles. This is a list of the fastest runs over 10 miles.</p>
 
-<table>
+<table class="chart">
 <tr>
   <th>Title</th>
   <th>Date</th>
@@ -167,7 +167,7 @@ been about 12-13 miles. This is a list of the fastest runs over 10 miles.</p>
 <p>Not to be left out, here are the fastest short runs. These are runs three
 to six miles in length.</p>
 
-<table>
+<table class="chart">
 <tr>
   <th>Title</th>
   <th>Date</th>
