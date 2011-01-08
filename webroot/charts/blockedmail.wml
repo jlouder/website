@@ -38,17 +38,7 @@ check tells me how many people have received that message before. If the
 number of recipients is very large, it's probably spam.</li>
 </ul>
 
-<p>Here's a breakdown of how many of the messages my mail server has processed
-this week were rejected or tagged as spam:</p>
-
-<div align="center">
-#include "/home/jlouder/public_html/mail-table.html"
-<p>As of: <lastmod /home/jlouder/public_html/mail-table.html /></p>
-</div>
-
-<br />
-
-<p>And here's a graph of how much of that spam is addressed to me:</p>
+<p>Here's a graph of how much spam I receive:</p>
 
 <div align="center">
 <img src="http://www.home.loudermilk.org/~jlouder/spamgraph.png">
