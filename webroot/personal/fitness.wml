@@ -146,7 +146,7 @@ only outdoor runs.</p>
   <td><:= $year :></td>
   <td><:= milesInYear($year, 'Running') :></td>
   <td><:= milesInYear($year, 'Cycling') :></td>
-<td>
+</tr>
 <: } :>
 </table>
 
