@@ -42,15 +42,16 @@ sub activities {
   return \@activities;
 }
 
-# SUBROUTINE:  milesRunInYear($year)
-# DESCRIPTION: Returns the number of miles run in $year.
-sub milesRunInYear {
-  my ($year) = @_;
+# SUBROUTINE:  milesInYear($year, $activity_name)
+# DESCRIPTION: Returns the number of miles in $year for a given activity.
+sub milesInYear {
+  my ($year, $activity_name) = @_;
   my $activities = activities();
   my $total_miles = 0;
   foreach my $a ( @{$activities} ) {
-    # Count only running activities
-    next unless $a->{activity}->{activityType}->{type}->{display} eq 'Running';
+    # Count only activities of the requested type
+    next unless $a->{activity}->{activityType}->{type}->{display}
+                eq $activity_name;
 
     # Count only activities from the requested year
     my $activity_year = 1900 +
@@ -127,18 +128,27 @@ as to how far you've run. Also, I can upload my data to Garmin Connect so
 that I can review the history and get interesting statistics like the
 ones below. Well, they're interesting to me, at least.</p>
 
-<h3>Miles run per year</h3>
+<h3>Miles run and biked per year</h3>
 
 <p>It wasn't until 2010 that I started entering
 all my treadmill runs manually. There are a few months each summer when it's
 too hot for a long run outside. So the years prior to 2010 are counting
 only outdoor runs.</p>
 
-<ul>
+<table class="chart">
+<tr>
+  <th>Year</th>
+  <th>Miles Run</th>
+  <th>Miles Biked</th>
+</tr>
 <: foreach my $year ( 2008 .. ((localtime(time))[5]+1900) ) { _:>
-  <li><:= $year :>: <:= milesRunInYear($year) :> miles</li>
+<tr>
+  <td><:= $year :></td>
+  <td><:= milesInYear($year, 'Running') :></td>
+  <td><:= milesInYear($year, 'Cycling') :></td>
+<td>
 <: } :>
-</ul>
+</table>
 
 <h3>Fastest long runs</h3>
 
