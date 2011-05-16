@@ -113,6 +113,27 @@ sub fastestRuns {
 
   return \@fastestRuns;
 }
+
+# SUBROUTINE:  milesInCurrentShoes()
+# DESCRIPTION: Returns the number of miles run since the last 'new shoes' run.
+sub milesInCurrentShoes {
+  my $activities = activities();
+  my $total_miles = 0;
+
+  # Sort the activities from most recent to least recent.
+  foreach my $a ( sort {
+                    $b->{activity}->{beginTimestamp}->{millis} <=>
+                    $a->{activity}->{beginTimestamp}->{millis} }
+                  @{$activities} ) {
+    $total_miles += $a->{activity}->{sumDistance}->{value};
+
+    last if $a->{activity}->{activityDescription}->{value}
+      =~ /\bnew shoes\b/;
+  }
+
+  # Return a number with a reasonable precision
+  return sprintf("%0.2f", $total_miles);
+}
 :>
 
 <title "Fitness">
@@ -149,6 +170,16 @@ only outdoor runs.</p>
 </tr>
 <: } :>
 </table>
+
+<p>I also use this data to track how much I've run since I last changed shoes.
+Since I run on smooth roads and treadmills, you can't tell from looking at a
+shoe's tread how worn it is. It will look like it has plenty of tread long
+after I have compressed all of the cushion out of the padding inside the
+shoe.</p>
+
+<p>Miles run in current shoes: <:= milesInCurrentShoes() :></p>
+
+<p>I try to change shoes about every 300 miles or so.</p>
 
 <h3>Fastest long runs</h3>
 
