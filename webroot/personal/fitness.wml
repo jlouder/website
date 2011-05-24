@@ -125,6 +125,9 @@ sub milesInCurrentShoes {
                     $b->{activity}->{beginTimestamp}->{millis} <=>
                     $a->{activity}->{beginTimestamp}->{millis} }
                   @{$activities} ) {
+    # Count only running activities
+    next unless $a->{activity}->{activityType}->{type}->{display} eq 'Running';
+
     $total_miles += $a->{activity}->{sumDistance}->{value};
 
     last if $a->{activity}->{activityDescription}->{value}
