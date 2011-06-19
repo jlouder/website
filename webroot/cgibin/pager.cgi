@@ -13,6 +13,7 @@ my %blacklisted_hosts = map { $_ => 1 } qw(
   static.162.198.46.78.clients.your-server.de
   static.142.88.46.78.clients.your-server.de
   hosted-by.altushost.com
+  91.201.66.76
 );
 
 my $remote_host = gethostbyaddr(inet_aton($ENV{'REMOTE_ADDR'}), AF_INET) ||
