@@ -11,6 +11,16 @@ use Config::Simple;
 use POSIX;
 use Data::Dumper;
 
+# SUBROUTINE:  commify()
+# DESCRIPTION: Add commas to a number to separate the thousands.
+#              From Perl Cookbook, 2.17, p. 64
+sub commify {
+  # commify a number. Perl Cookbook, 2.17, p. 64
+  my $text = reverse $_[0];
+  $text =~ s/(\d\d\d)(?=\d)(?!\d*\.)/$1,/g;
+  return scalar reverse $text;
+}
+
 # SUBROUTINE:  activities()
 # DESCRIPTION: Returns a reference to a list of all activities. If cached data
 #              is available and recent enough, that is what is returned.
@@ -168,8 +178,8 @@ only outdoor runs.</p>
 <: foreach my $year ( 2008 .. ((localtime(time))[5]+1900) ) { _:>
 <tr>
   <td><:= $year :></td>
-  <td><:= milesInYear($year, 'Running') :></td>
-  <td><:= milesInYear($year, 'Cycling') :></td>
+  <td><:= commify(milesInYear($year, 'Running')) :></td>
+  <td><:= commify(milesInYear($year, 'Cycling')) :></td>
 </tr>
 <: } :>
 </table>
