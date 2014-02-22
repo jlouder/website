@@ -65,10 +65,10 @@ sub milesInYear {
 
     # Count only activities from the requested year
     my $activity_year = 1900 +
-     (localtime($a->{activity}->{activitySummaryBeginTimestamp}->{millis}/1000))[5];
+     (localtime($a->{activity}->{beginTimestamp}->{millis}/1000))[5];
     next unless $activity_year == $year;
 
-    $total_miles += $a->{activity}->{activitySummarySumDistance}->{value};
+    $total_miles += $a->{activity}->{sumDistance}->{value};
   }
 
   # Return a number with a reasonable precision
@@ -101,12 +101,12 @@ sub fastestRuns {
 
     # Enforce the minimum distance
     if( defined $opts{minMiles} ) {
-      next unless $a->{activity}->{activitySummarySumDistance}->{value} >= $opts{minMiles};
+      next unless $a->{activity}->{sumDistance}->{value} >= $opts{minMiles};
     }
 
     # Enforce the maximum distance
     if( defined $opts{maxMiles} ) {
-      next unless $a->{activity}->{activitySummarySumDistance}->{value} <= $opts{maxMiles};
+      next unless $a->{activity}->{sumDistance}->{value} <= $opts{maxMiles};
     }
 
     push @matchingRuns, $a;
@@ -114,8 +114,8 @@ sub fastestRuns {
 
   # Sort the matching run list so that the fastest runs are first.
   @matchingRuns = sort {
-    $a->{activity}->{activitySummaryWeightedMeanSpeed}->{value} <=>
-      $b->{activity}->{activitySummaryWeightedMeanSpeed}->{value}
+    $a->{activity}->{weightedMeanSpeed}->{value} <=>
+      $b->{activity}->{weightedMeanSpeed}->{value}
   } @matchingRuns;
 
   # Slice off however many the user requested from the front of the list.
@@ -132,13 +132,13 @@ sub milesInCurrentShoes {
 
   # Sort the activities from most recent to least recent.
   foreach my $a ( sort {
-                    $b->{activity}->{activitySummaryBeginTimestamp}->{millis} <=>
-                    $a->{activity}->{activitySummaryBeginTimestamp}->{millis} }
+                    $b->{activity}->{beginTimestamp}->{millis} <=>
+                    $a->{activity}->{beginTimestamp}->{millis} }
                   @{$activities} ) {
     # Count only running activities
     next unless $a->{activity}->{activityType}->{type}->{display} eq 'Running';
 
-    $total_miles += $a->{activity}->{activitySummarySumDistance}->{value};
+    $total_miles += $a->{activity}->{sumDistance}->{value};
 
     last if $a->{activity}->{activityDescription}->{value}
       =~ /\bnew shoes\b/;
@@ -209,9 +209,9 @@ been about 12-13 miles. This is a list of the fastest runs over 10 miles.</p>
 <: foreach my $run ( @{fastestRuns(minMiles => 10, numResults => 5)} ) { _:>
 <tr>
   <td><a href="http://connect.garmin.com/activity/<:= $run->{activity}->{activityId} :>"><:= $run->{activity}->{activityName}->{value} :></a></td>
-  <td><:= $run->{activity}->{activitySummaryBeginTimestamp}->{abbr} :></td>
-  <td><:= $run->{activity}->{activitySummaryWeightedMeanSpeed}->{withUnitAbbr} :></td>
-  <td><:= $run->{activity}->{activitySummarySumDistance}->{withUnitAbbr} :></td>
+  <td><:= $run->{activity}->{beginTimestamp}->{abbr} :></td>
+  <td><:= $run->{activity}->{weightedMeanSpeed}->{withUnitAbbr} :></td>
+  <td><:= $run->{activity}->{sumDistance}->{withUnitAbbr} :></td>
 </tr>
 <: } :>
 </table>
@@ -231,9 +231,9 @@ to six miles in length.</p>
 <: foreach my $run ( @{fastestRuns(minMiles => 3, maxMiles => 6, numResults => 5)} ) { _:>
 <tr>
   <td><a href="http://connect.garmin.com/activity/<:= $run->{activity}->{activityId} :>"><:= $run->{activity}->{activityName}->{value} :></a></td>
-  <td><:= $run->{activity}->{activitySummaryBeginTimestamp}->{abbr} :></td>
-  <td><:= $run->{activity}->{activitySummaryWeightedMeanSpeed}->{withUnitAbbr} :></td>
-  <td><:= $run->{activity}->{activitySummarySumDistance}->{withUnitAbbr} :></td>
+  <td><:= $run->{activity}->{beginTimestamp}->{abbr} :></td>
+  <td><:= $run->{activity}->{weightedMeanSpeed}->{withUnitAbbr} :></td>
+  <td><:= $run->{activity}->{sumDistance}->{withUnitAbbr} :></td>
 </tr>
 <: } :>
 </table>
