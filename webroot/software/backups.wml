@@ -122,7 +122,7 @@ but my backups would take up too many CDs.</p>
 <h3>Getting the Software</h3>
 
 <p>You can grab
-<a href="http://www.home.loudermilk.org/cgi-bin/viewvc.cgi/backup/">a copy
+<a href="https://github.com/jlouder/backup">a copy
 of backup.pl and offsite.pl</a> out of my CVS repository. There's POD
 documentation embedded in the scripts, and HTML versions of the documentation
 for <a href="backup.man.html">backup.pl</a> and
