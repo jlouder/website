@@ -36,8 +36,8 @@ own tree, I can provide that.</p>
 <p>There's software available to put family trees on the web, but I like to
 make my own so it works just the way I want. The tree is drawn by a
 well-intentioned, but now almost out-of-control
-<a href="http://www.home.loudermilk.org/cgi-bin/viewvc.cgi/website/webroot/\
-genealogy/tree.cgi?rev=HEAD&content-type=text/vnd.viewcvs-markup">Perl
+<a href="https://github.com/jlouder/website/blob/master/\
+webroot/genealogy/tree.cgi">Perl
 script</a>. The data is stored in
 <a href="http://www.gendex.com/gedcom55/55gctoc.htm">GEDCOM format</a>, which
 seems to be supported by just about all genealogy software. They may not

@@ -61,9 +61,8 @@ the fixed-width font, I can just write:
 Not only do these tags save
 time when writing the pages, they make it trivial to change the look
 of the site. All these tags are defined in
-<tt><a href="http://www.home.loudermilk.org/cgi-bin/viewvc.cgi/website/\
-             webroot/include/tags.wml?rev=HEAD&\
-             content-type=text/vnd.viewcvs-markup">tags.wml</a></tt>, if
+<tt><a href="https://github.com/jlouder/website/blob/master\
+/webroot/include/tags.wml">tags.wml</a></tt>, if
 you'd like to have a look.</p>
 
 <p><b>Auto-adjusted pathnames.</b> I like to put all my images in one
@@ -116,5 +115,5 @@ anything I want on their systems.</p>
 <h3>Source code</h3>
 
 <p>If you'd like to see how the entire site fits together, take a look at
-<a href="http://www.home.loudermilk.org/cgi-bin/viewvc.cgi/website/#dirlist">\
-the website module</a> in CVS.</p>
+<a href="https://github.com/jlouder/website">\
+the website source</a> on GitHub.</p>
