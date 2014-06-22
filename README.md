@@ -7,5 +7,5 @@ the history for each file.
 To build the web site, you'll need [WML](thewml.org). From the top of the source tree, run:
 
 ```
-wml -a -F include -I $PWD/webroot/include
+wmk -a -F include -I $PWD/webroot/include
 ```
