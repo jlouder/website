@@ -19,8 +19,10 @@ what I've listed by the time I open the gifts, so it works out well.</p>
 
 <p>I originally wrote this application in Perl as a set of CGIs, but later
 rewrote it in Java to teach myself JSP, servlets, and
-<a href="http://jakarta.apache.org/struts/">Struts</a>. The
-<a href="http://www.home.loudermilk.org/cgi-bin/viewvc.cgi/giftreg/">source
+<a href="http://jakarta.apache.org/struts/">Struts</a>. Then I rewrote it
+again in Perl, but using the <a href="http://mojolicio.us/">Mojolicious</a>
+framework, because I was tired of maintaining the Java version. The
+<a href="https://github.com/jlouder/giftreg">source
 code</a> is available, too.</p>
 
 <p>This application will allow anyone to list and track gifts they'd like,
