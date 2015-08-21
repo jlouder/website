@@ -130,7 +130,8 @@ sub fastestRuns {
 }
 
 # SUBROUTINE:  milesInCurrentShoes()
-# DESCRIPTION: Returns the number of miles run since the last 'new shoes' run.
+# DESCRIPTION: Returns the number of miles run since the last 'new shoes' run,
+#              ignoring any 'old shoes' runs.
 sub milesInCurrentShoes {
   my $activities = activities();
   my $total_miles = 0;
@@ -142,6 +143,10 @@ sub milesInCurrentShoes {
                   @{$activities} ) {
     # Count only running activities
     next unless $a->{activity}->{activityType}->{type}->{display} eq 'Running';
+
+    # Don't count any runs in old shoes
+    next if $a->{activity}->{activityDescription}->{value}
+      =~ /\bold shoes\b/;
 
     $total_miles += $a->{activity}->{sumDistance}->{value};
 
