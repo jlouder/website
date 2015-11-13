@@ -218,7 +218,7 @@ been about 12-13 miles. This is a list of the fastest runs over 10 miles.</p>
 </tr>
 <: foreach my $run ( @{fastestRuns(minMiles => 10, numResults => 5)} ) { _:>
 <tr>
-  <td><a href="http://connect.garmin.com/activity/<:= $run->{activity}->{activityId} :>"><:= $run->{activity}->{activityName}->{value} :></a></td>
+  <td><a href="http://connect.garmin.com/modern/activity/<:= $run->{activity}->{activityId} :>"><:= $run->{activity}->{activityName}->{value} :></a></td>
   <td><:= $run->{activity}->{beginTimestamp}->{abbr} :></td>
   <td><:= $run->{activity}->{weightedMeanSpeed}->{withUnitAbbr} :></td>
   <td><:= $run->{activity}->{sumDistance}->{withUnitAbbr} :></td>
