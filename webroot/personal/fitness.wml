@@ -165,8 +165,8 @@ sub milesInCurrentShoes {
 
 <h3>Background</h3>
 
-<p>I like to run for exercise, and for years I have been using a Garmin
-ForeRunner to keep track of my pace and distance. This is much more accurate
+<p>I like to run for exercise, and for years I have been using a GPS watch
+to keep track of my pace and distance. This is much more accurate
 than using a pedometer, which is just counting your steps and taking a guess
 as to how far you've run. Also, I can upload my data to Garmin Connect so
 that I can review the history and get interesting statistics like the
@@ -184,12 +184,14 @@ only outdoor runs.</p>
   <th>Year</th>
   <th>Miles Run</th>
   <th>Miles Biked</th>
+  <th>Miles Hiked</th>
 </tr>
 <: foreach my $year ( 2008 .. ((localtime(time))[5]+1900) ) { _:>
 <tr>
   <td><:= $year :></td>
   <td><:= commify(milesInYear($year, 'Running')) :></td>
   <td><:= commify(milesInYear($year, 'Cycling')) :></td>
+  <td><:= commify(milesInYear($year, 'Hiking')) :></td>
 </tr>
 <: } :>
 </table>
