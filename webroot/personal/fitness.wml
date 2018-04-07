@@ -9,7 +9,7 @@ use File::Path qw( make_path );
 use Storable;
 use WebService::GarminConnect;
 use Config::Simple;
-use POSIX;
+use POSIX qw(mktime strftime);
 use Data::Dumper;
 
 # SUBROUTINE:  commify()
@@ -20,6 +20,25 @@ sub commify {
   my $text = reverse $_[0];
   $text =~ s/(\d\d\d)(?=\d)(?!\d*\.)/$1,/g;
   return scalar reverse $text;
+}
+
+# SUBROUTINE:  date($seconds_since_epoch)
+# DESCRIPTION: Return a nicely-formatted date string (no time).
+sub pretty_print_date {
+  my $seconds_since_epoch = $_[0];
+  return strftime("%b %e, %Y", localtime($seconds_since_epoch));
+}
+
+# SUBROUTINE: pretty_print_speed($meters_per_second)
+# DESCRIPTION: Return a nicely formatted "MM:SS min/mi"
+sub pretty_print_speed {
+  my $meters_per_second = $_[0];
+  my $minutes_per_mile = 26.8224 / $meters_per_second;
+
+  my $minutes = int($minutes_per_mile);
+  my $seconds_fractional = $minutes_per_mile - $minutes;
+  my $seconds = $seconds_fractional * 60;
+  return sprintf("%d:%04.1f min/mi", $minutes, $seconds);
 }
 
 # SUBROUTINE:  activities()
@@ -63,17 +82,26 @@ sub milesInYear {
   my ($year, $activity_name) = @_;
   my $activities = activities();
   my $total_miles = 0;
+  my $types = {
+    running => 1,
+    cycling => 2,
+    hiking  => 3,
+  };
+  if( !defined($types->{lc($activity_name)}) ) {
+    die "unknown activity type: $activity_name";
+  }
   foreach my $a ( @{$activities} ) {
     # Count only activities of the requested type
-    next unless $a->{activity}->{activityType}->{type}->{display}
-                eq $activity_name;
+    my $type = $a->{activity}->{activityType};
+    next unless ($type->{typeId} eq $types->{lc($activity_name)} or
+                 $type->{parentTypeId} eq $types->{lc($activity_name)});
 
     # Count only activities from the requested year
     my $activity_year = 1900 +
-     (localtime($a->{activity}->{beginTimestamp}->{millis}/1000))[5];
+     (localtime($a->{activity}->{beginTimestamp}/1000))[5];
     next unless $activity_year == $year;
 
-    $total_miles += $a->{activity}->{sumDistance}->{value};
+    $total_miles += $a->{activity}->{distance} / 1609.344; # meters to miles
   }
 
   # Return a number with a reasonable precision
@@ -102,16 +130,17 @@ sub fastestRuns {
   my @matchingRuns;
   foreach my $a ( @{$activities} ) {
     # Count only running activities
-    next unless $a->{activity}->{activityType}->{type}->{display} eq 'Running';
+    next unless ($a->{activity}->{activityType}->{typeId} eq 1 or
+                 $a->{activity}->{activityType}->{parentTypeId} eq 1);
 
     # Enforce the minimum distance
     if( defined $opts{minMiles} ) {
-      next unless $a->{activity}->{sumDistance}->{value} >= $opts{minMiles};
+      next unless $a->{activity}->{distance} / 1609.344 >= $opts{minMiles};
     }
 
     # Enforce the maximum distance
     if( defined $opts{maxMiles} ) {
-      next unless $a->{activity}->{sumDistance}->{value} <= $opts{maxMiles};
+      next unless $a->{activity}->{distance} / 1609.344 <= $opts{maxMiles};
     }
 
     push @matchingRuns, $a;
@@ -119,8 +148,8 @@ sub fastestRuns {
 
   # Sort the matching run list so that the fastest runs are first.
   @matchingRuns = sort {
-    $a->{activity}->{weightedMeanSpeed}->{value} <=>
-      $b->{activity}->{weightedMeanSpeed}->{value}
+    $b->{activity}->{averageSpeed} <=>
+      $a->{activity}->{averageSpeed}
   } @matchingRuns;
 
   # Slice off however many the user requested from the front of the list.
@@ -138,20 +167,23 @@ sub milesInCurrentShoes {
 
   # Sort the activities from most recent to least recent.
   foreach my $a ( sort {
-                    $b->{activity}->{beginTimestamp}->{millis} <=>
-                    $a->{activity}->{beginTimestamp}->{millis} }
+                    $b->{activity}->{beginTimestamp} <=>
+                    $a->{activity}->{beginTimestamp} }
                   @{$activities} ) {
     # Count only running activities
-    next unless $a->{activity}->{activityType}->{type}->{display} eq 'Running';
+    next unless ($a->{activity}->{activityType}->{typeId} eq 1 or
+                 $a->{activity}->{activityType}->{parentTypeId} eq 1);
 
     # Don't count any runs in old shoes
-    next if $a->{activity}->{activityDescription}->{value}
-      =~ /\bold shoes\b/;
+    next if (defined $a->{activity}->{description} &&
+             $a->{activity}->{description}
+               =~ /\bold shoes\b/);
 
-    $total_miles += $a->{activity}->{sumDistance}->{value};
+    $total_miles += $a->{activity}->{distance} / 1609.344;
 
-    last if $a->{activity}->{activityDescription}->{value}
-      =~ /\bnew shoes\b/;
+    last if (defined $a->{activity}->{description} &&
+             $a->{activity}->{description}
+               =~ /\bnew shoes\b/);
   }
 
   # Return a number with a reasonable precision
@@ -220,10 +252,10 @@ been about 12-13 miles. This is a list of the fastest runs over 10 miles.</p>
 </tr>
 <: foreach my $run ( @{fastestRuns(minMiles => 10, numResults => 5)} ) { _:>
 <tr>
-  <td><a href="http://connect.garmin.com/modern/activity/<:= $run->{activity}->{activityId} :>"><:= $run->{activity}->{activityName}->{value} :></a></td>
-  <td><:= $run->{activity}->{beginTimestamp}->{abbr} :></td>
-  <td><:= $run->{activity}->{weightedMeanSpeed}->{withUnitAbbr} :></td>
-  <td><:= $run->{activity}->{sumDistance}->{withUnitAbbr} :></td>
+  <td><a href="http://connect.garmin.com/modern/activity/<:= $run->{activity}->{activityId} :>"><:= $run->{activity}->{activityName} || 'Untitled' :></a></td>
+  <td><:= pretty_print_date($run->{activity}->{beginTimestamp} / 1000) :></td>
+  <td><:= pretty_print_speed($run->{activity}->{averageSpeed}) :></td>
+  <td><:= sprintf("%.02f mi", $run->{activity}->{distance} / 1609.344) :></td>
 </tr>
 <: } :>
 </table>
@@ -242,10 +274,10 @@ to six miles in length.</p>
 </tr>
 <: foreach my $run ( @{fastestRuns(minMiles => 3, maxMiles => 6, numResults => 5)} ) { _:>
 <tr>
-  <td><a href="http://connect.garmin.com/modern/activity/<:= $run->{activity}->{activityId} :>"><:= $run->{activity}->{activityName}->{value} :></a></td>
-  <td><:= $run->{activity}->{beginTimestamp}->{abbr} :></td>
-  <td><:= $run->{activity}->{weightedMeanSpeed}->{withUnitAbbr} :></td>
-  <td><:= $run->{activity}->{sumDistance}->{withUnitAbbr} :></td>
+  <td><a href="http://connect.garmin.com/modern/activity/<:= $run->{activity}->{activityId} :>"><:= $run->{activity}->{activityName} || 'Untitled' :></a></td>
+  <td><:= pretty_print_date($run->{activity}->{beginTimestamp} / 1000) :></td>
+  <td><:= pretty_print_speed($run->{activity}->{averageSpeed}) :></td>
+  <td><:= sprintf("%.02f mi", $run->{activity}->{distance} / 1609.344) :></td>
 </tr>
 <: } :>
 </table>
