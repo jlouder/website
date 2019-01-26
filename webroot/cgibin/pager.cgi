@@ -27,28 +27,9 @@ if( $message =~ /^\S*$/ ) {
   die "Message is blank, not sending.";
 }
 
-# always send this to my email, never to the phone
-my $email_address = 'joel@loudermilk.org';
-
-# prepend the web client's name to the message
-my $subject = "Web message from: $remote_host";
-
-# If the sender is blacklisted, send the message to /dev/null, but make
-# it look like it was sent.
-my $sendmail = defined $blacklisted_hosts{$remote_host} ?
-  '>/dev/null' : '|/usr/bin/sendmail -t';
-
-# send the message to my pager
-open SENDMAIL, $sendmail or die "Can't open $sendmail: $!";
-print SENDMAIL << "__EOF__";
-To: $email_address
-Subject: $subject
-
-$message
-__EOF__
-close SENDMAIL;
-
-# also write the message to a log
+# 2019-01-26: Looking back through the log, it's been easily 10 years
+# since I got a legitimate message through this thing. Quit emailing
+# these and just write to the log.
 open LOGFILE, ">>$logfile" or die "Can't open logfile \"$logfile\" $!";
 my $date = `date`;
 chomp $date;
