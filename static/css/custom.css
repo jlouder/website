@@ -5,3 +5,7 @@ body {
 h1 {
   font-family: "Roboto Slab";
 }
+
+.footer__inner:nth-of-type(2) {
+  display: none;
+}
