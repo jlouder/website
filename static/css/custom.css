@@ -9,3 +9,10 @@ h1 {
 .footer__inner:nth-of-type(2) {
   display: none;
 }
+
+.thumbnail {
+  float: right;
+  margin-top: 0;
+  margin-left: 25px;
+  border: 1px solid black;
+}
