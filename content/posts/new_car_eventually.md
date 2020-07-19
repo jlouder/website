@@ -7,7 +7,9 @@ images:
 tags:
   - untagged
 ---
-[![][1]](http://www.home.loudermilk.org/gallery/misc/aav) I've been planning to get a MINI Cooper S for months now, and I finally put a deposit down and placed an order this morning. The picture you see is from the MINI web site, where you build the car you want. Mine should look just like the picture.
+{{< figure src="https://photos.loudermilk.org/misc/thumbnails/aav.jpg"
+           link="https://photos.loudermilk.org/misc/aav.jpg" class="thumbnail" >}}
+I've been planning to get a MINI Cooper S for months now, and I finally put a deposit down and placed an order this morning. The picture you see is from the MINI web site, where you build the car you want. Mine should look just like the picture.
 
 
 
@@ -21,4 +23,3 @@ Most people are concerned with how small the MINI is, but for me it's an upgrade
 
 The car should be at my dealership sometime in late July or August. You can expect many, many more pictures then.
 
-  [1]: https://imgprx.livejournal.net/604b4402cc3bd3181bdb0bf21e5a3b9feacbde23/kp6dxsd8Euxi3iGxAqucft35YvCvhev5U-ltF4Oxa0kNa3DAO8ak5yGEUpCfErw0khSpO5111n3nzbPuJryc-k4X6hoHoKAS0Rp0VTlbSks

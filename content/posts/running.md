@@ -7,7 +7,8 @@ images:
 tags:
   - untagged
 ---
-[![][1]](http://www.home.loudermilk.org/gallery/misc/aap)
+{{< figure src="https://photos.loudermilk.org/misc/thumbnails/aap.jpg"
+           link="https://photos.loudermilk.org/misc/aap.jpg" class="thumbnail" >}}
 
 Michele and I have been doing a lot of running lately. Last fall, I got started running a few 5k races with some friends at work. That's only about 3 miles, so it wasn't very difficult. I'm not a fast runner by any means, though. I run about a 10 minute mile.
 
@@ -23,4 +24,3 @@ There's always a photographer at the finish line of these races who wants to lat
 
 Our next goal, which is quite ambitious, is to run the Disney marathon next year. I think they do that in January or February. We're still continuing our weekly runs, and we're up to 8.5 miles now. That's a long way from 26 miles, but you've got to start somewhere.
 
-  [1]: https://imgprx.livejournal.net/2207dca5c953874016b395d7972d48d9085a86da/kp6dxsd8Euxi3iGxAqucft35YvCvhev5U-ltF4Oxa0kNa3DAO8ak5yGEUpCfErw0MB97oFJn-y2M2RSDLrRGp0zA83KXCuesQ5uAyGZW8cw

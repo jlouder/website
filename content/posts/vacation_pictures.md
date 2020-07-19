@@ -7,7 +7,7 @@ images:
 tags:
   - untagged
 ---
-Thanks to much hard work by Michele, our vacation pictures are all online [here](http://www.home.loudermilk.org/gallery/europe2006).
+Thanks to much hard work by Michele, our vacation pictures are all online [here](https://photos.loudermilk.org/europe2006/).
 
 
 

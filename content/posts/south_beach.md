@@ -7,7 +7,9 @@ images:
 tags:
   - untagged
 ---
-[![][1]](http://www.home.loudermilk.org/gallery/southbeach2006)Michele and I just got back this weekend from a week-long trip with friends to South Beach. We had a great time, although there's no way I could live there because I'd go broke. Drinks were $10-12 for a mixed drink, and about $15 for a martini. Parking at the hotel was $30 per day!
+{{< figure src="https://photos.loudermilk.org/southbeach2006/thumbnails/aaq.jpg"
+           link="https://photos.loudermilk.org/southbeach2006/" class="thumbnail" >}}
+Michele and I just got back this weekend from a week-long trip with friends to South Beach. We had a great time, although there's no way I could live there because I'd go broke. Drinks were $10-12 for a mixed drink, and about $15 for a martini. Parking at the hotel was $30 per day!
 
 
 
@@ -15,6 +17,4 @@ I can't get over how late everything stays open in South Beach. The bars are ope
 
 
 
-I took a relatively small number of pictures, and they're [on my site](http://www.home.loudermilk.org/gallery/southbeach2006).
-
-  [1]: https://imgprx.livejournal.net/b1a148504f2dc0cf0f2e02820d1369a36fb3a10d/kp6dxsd8Euxi3iGxAqucft35YvCvhev5U-ltF4Oxa0kNa3DAO8ak5yGEUpCfErw0NWanGhCLl-Ja-XQZCW6rLD3yEvYz-tuzxbfLWPgssiASJSuquSBpsUR_YqJCXQHa
+I took a relatively small number of pictures, and they're [on my site](https://photos.loudermilk.org/southbeach2006/).
