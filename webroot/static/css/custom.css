@@ -16,3 +16,13 @@ h1 {
   margin-left: 25px;
   border: 1px solid black;
 }
+
+.x:before {
+  content: "\2717";
+  color: red;
+}
+
+.checkmark:before {
+  content: "\2713";
+  color: green;
+}
