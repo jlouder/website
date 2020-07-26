@@ -6,6 +6,8 @@ toc: false
 images:
 tags:
   - untagged
+videos:
+  - https://www.youtube.com/v/meSyMKQLy6w
 ---
 The first week of March, Michele and I rented a camper van and took our bikes to several
 rail-trails around central and north Florida. We stayed at state park or state forest
