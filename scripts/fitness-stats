@@ -1,0 +1,234 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+use File::Path qw( make_path );
+use WebService::GarminConnect;
+use Config::Simple;
+use POSIX qw(mktime strftime);
+use Data::Dumper;
+use FindBin;
+use JSON;
+
+# SUBROUTINE:  commify()
+# DESCRIPTION: Add commas to a number to separate the thousands.
+#              From Perl Cookbook, 2.17, p. 64
+sub commify {
+  # commify a number. Perl Cookbook, 2.17, p. 64
+  my $text = reverse $_[0];
+  $text =~ s/(\d\d\d)(?=\d)(?!\d*\.)/$1,/g;
+  return scalar reverse $text;
+}
+
+# SUBROUTINE:  date($seconds_since_epoch)
+# DESCRIPTION: Return a nicely-formatted date string (no time).
+sub pretty_print_date {
+  my $seconds_since_epoch = $_[0];
+  return strftime("%b %e, %Y", localtime($seconds_since_epoch));
+}
+
+# SUBROUTINE: pretty_print_speed($meters_per_second)
+# DESCRIPTION: Return a nicely formatted "MM:SS min/mi"
+sub pretty_print_speed {
+  my $meters_per_second = $_[0];
+  my $minutes_per_mile = 26.8224 / $meters_per_second;
+
+  my $minutes = int($minutes_per_mile);
+  my $seconds_fractional = $minutes_per_mile - $minutes;
+  my $seconds = $seconds_fractional * 60;
+  return sprintf("%d:%04.1f min/mi", $minutes, $seconds);
+}
+
+# SUBROUTINE:  activities()
+# DESCRIPTION: Returns a reference to a list of all activities. If cached data
+#              is available and recent enough, that is what is returned.
+#              Otherwise, fetches the data from Garmin Connect.
+sub activities {
+  my $configfile = $ENV{HOME} . '/.websiterc';
+  my $cachedir = $ENV{HOME} . '/.cache/website';
+  my $cachefile = $cachedir . '/activities.json';
+
+  # Is the cache available and recent?
+  my $recent_enough = mktime(localtime(time - 60*60*23)); # 23 hours ago
+  if( -r $cachefile && (stat(_))[9] >= $recent_enough ) {
+    my $json = do { local(@ARGV, $/) = $cachefile; <> };
+    return decode_json($json);
+  }
+
+  # Call Garmin Connect to get the data.
+  # Get the user's Garmin Connect username/password.
+  my $config = new Config::Simple($configfile);
+  my $connect = WebService::GarminConnect->new(
+    username => $config->param('garmin_connect.username'),
+    password => $config->param('garmin_connect.password')
+  );
+  my @activities = $connect->activities();
+
+  # Cache the activities before returning them.
+  if( @activities ) {
+    if( ! -e $cachedir ) {
+      make_path($cachedir);
+    }
+    open my $fh, '>', $cachefile or die "Can't write to $cachefile: $!";
+    print $fh encode_json(\@activities), "\n";
+    close $fh;
+  }
+
+  return \@activities;
+}
+
+# SUBROUTINE:  milesInYear($year, $activity_name)
+# DESCRIPTION: Returns the number of miles in $year for a given activity.
+sub milesInYear {
+  my ($year, $activity_name) = @_;
+  my $activities = activities();
+  my $total_miles = 0;
+  my $types = {
+    running => 1,
+    cycling => 2,
+    hiking  => 3,
+  };
+  if( !defined($types->{lc($activity_name)}) ) {
+    die "unknown activity type: $activity_name";
+  }
+  foreach my $a ( @{$activities} ) {
+    # Count only activities of the requested type
+    my $type = $a->{activity}->{activityType};
+    next unless ($type->{typeId} eq $types->{lc($activity_name)} or
+                 $type->{parentTypeId} eq $types->{lc($activity_name)});
+
+    # Count only activities from the requested year
+    my $activity_year = 1900 +
+     (localtime($a->{activity}->{beginTimestamp}/1000))[5];
+    next unless $activity_year == $year;
+
+    $total_miles += $a->{activity}->{distance} / 1609.344; # meters to miles
+  }
+
+  # Return a number with a reasonable precision
+  return sprintf("%0.2f", $total_miles);
+}
+
+# SUBROUTINE:  fastestRuns( minMiles => $min,
+#                           maxMiles => $max,
+#                           numResults => $num )
+# DESCRIPTION: Returns the $num fastest runs that are at least $min miles
+#              but not more than $max miles in length. You can specify
+#              just a minimum bound or just a maximum, or both. The results
+#              are returned as a list reference of activities.
+sub fastestRuns {
+  my %opts = @_;
+  if( !defined $opts{numResults} ) {
+    die "numResults is required";
+  }
+  if( !defined $opts{minMiles} && !defined $opts{maxMiles} ) {
+    die "at least one of minMiles or maxMiles is required";
+  }
+
+  my $activities = activities();
+  # Create a list of just runs which match the min/max, which we will sort
+  # later.
+  my @matchingRuns;
+  foreach my $a ( @{$activities} ) {
+    # Count only running activities
+    next unless ($a->{activity}->{activityType}->{typeId} eq 1 or
+                 $a->{activity}->{activityType}->{parentTypeId} eq 1);
+
+    # Enforce the minimum distance
+    if( defined $opts{minMiles} ) {
+      next unless $a->{activity}->{distance} / 1609.344 >= $opts{minMiles};
+    }
+
+    # Enforce the maximum distance
+    if( defined $opts{maxMiles} ) {
+      next unless $a->{activity}->{distance} / 1609.344 <= $opts{maxMiles};
+    }
+
+    push @matchingRuns, $a;
+  }
+
+  # Sort the matching run list so that the fastest runs are first.
+  @matchingRuns = sort {
+    $b->{activity}->{averageSpeed} <=>
+      $a->{activity}->{averageSpeed}
+  } @matchingRuns;
+
+  # Slice off however many the user requested from the front of the list.
+  my @fastestRuns = @matchingRuns[0 .. $opts{numResults}-1];
+
+  return \@fastestRuns;
+}
+
+# SUBROUTINE:  milesInCurrentShoes()
+# DESCRIPTION: Returns the number of miles run since the last 'new shoes' run,
+#              ignoring any 'old shoes' runs.
+sub milesInCurrentShoes {
+  my $activities = activities();
+  my $total_miles = 0;
+
+  # Sort the activities from most recent to least recent.
+  foreach my $a ( sort {
+                    $b->{activity}->{beginTimestamp} <=>
+                    $a->{activity}->{beginTimestamp} }
+                  @{$activities} ) {
+    # Count only running activities
+    next unless ($a->{activity}->{activityType}->{typeId} eq 1 or
+                 $a->{activity}->{activityType}->{parentTypeId} eq 1);
+
+    # Don't count any runs in old shoes
+    next if (defined $a->{activity}->{description} &&
+             $a->{activity}->{description}
+               =~ /\bold shoes\b/);
+
+    $total_miles += $a->{activity}->{distance} / 1609.344;
+
+    last if (defined $a->{activity}->{description} &&
+             $a->{activity}->{description}
+               =~ /\bnew shoes\b/);
+  }
+
+  # Return a number with a reasonable precision
+  return sprintf("%0.2f", $total_miles);
+}
+
+my $data = {};
+
+$data->{milesInCurrentShoes} = milesInCurrentShoes();
+
+# yearly totals
+foreach my $year ( 2008 .. ((localtime(time))[5]+1900) ) {
+  my $stats = {};
+  $stats->{Year} = $year;
+  foreach my $activity_type (qw( Running Cycling Hiking )) {
+    $stats->{$activity_type} = commify(milesInYear($year, $activity_type));
+  }
+  push @{$data->{milesPerYear}}, $stats;
+}
+
+# fastest long runs
+foreach my $run ( @{fastestRuns(minMiles => 10, numResults => 5)} ) {
+  my $this_run = {};
+  $this_run->{name} = $run->{activity}->{activityName} || 'Untitled';
+  $this_run->{link} = 'http://connect.garmin.com/modern/activity/' . $run->{activity}->{activityId};
+  $this_run->{date} = pretty_print_date($run->{activity}->{beginTimestamp} / 1000);
+  $this_run->{speed} = pretty_print_speed($run->{activity}->{averageSpeed});
+  $this_run->{distance} = sprintf("%.02f mi", $run->{activity}->{distance} / 1609.344);
+  push @{$data->{fastestLongRuns}}, $this_run;
+}
+
+# fastest short runs
+foreach my $run ( @{fastestRuns(minMiles => 3, maxMiles => 6, numResults => 5)} ) {
+  my $this_run = {};
+  $this_run->{name} = $run->{activity}->{activityName} || 'Untitled';
+  $this_run->{link} = 'http://connect.garmin.com/modern/activity/' . $run->{activity}->{activityId};
+  $this_run->{date} = pretty_print_date($run->{activity}->{beginTimestamp} / 1000);
+  $this_run->{speed} = pretty_print_speed($run->{activity}->{averageSpeed});
+  $this_run->{distance} = sprintf("%.02f mi", $run->{activity}->{distance} / 1609.344);
+  push @{$data->{fastestShortRuns}}, $this_run;
+}
+
+my $json = JSON->new()->pretty();
+
+my $output_filename = $FindBin::Bin . '/../webroot/data/fitness.json';
+open my $output_file, '>', $output_filename or die "Can't open $output_filename: $!";
+print $output_file $json->encode($data);
+close $output_file;
