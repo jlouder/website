@@ -30,7 +30,7 @@ versions of both operating systems:
 
 To be fair, I have found many features of HP-UX that
 I am quite fond of and wish Solaris had. I've pointed those out
-<a href="#goodstuff">below</a> as
+[below](#what-hp-ux-gets-right) as
 well.
 
 ## What HP-UX gets wrong
@@ -184,7 +184,7 @@ LVM.** LVM is nice, but when I create a volume group, I really shouldn't
 have to run `mknod` myself and stick a device file in
 /dev/vg<em>xx</em>.
 
-<h3><a name="goodstuff">What HP-UX gets right</a></h3>
+## What HP-UX gets right
 
 Believe it or not, I actually do like quite a few things about HP-UX. They
 are outweighed in importance by the things I don't like, but I list them here
