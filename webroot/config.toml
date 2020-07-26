@@ -123,6 +123,10 @@ disableHugoGeneratorInject = false
     name = "youtube"
     url  = "https://www.youtube.com/channel/UCYxgekxQbDMSOVjNudvqA5w"
 
+  [[params.social]]
+    name = "strava"
+    url  = "https://www.strava.com/athletes/6945577"
+
 [languages]
   [languages.en]
     subtitle  = "Hello Friend NG Theme"
@@ -136,10 +140,17 @@ disableHugoGeneratorInject = false
 
 [menu]
   [[menu.main]]
+    identifier = "photos"
+    name       = "Photos"
+    url        = "https://photos.loudermilk.org/"
+    weight     = 1
+  [[menu.main]]
     identifier = "fitness"
     name       = "Fitness"
     url        = "fitness/"
+    weight     = 2
   [[menu.main]]
     identifier = "posts"
     name       = "Posts"
     url        = "posts/"
+    weight     = 3
