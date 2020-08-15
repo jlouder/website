@@ -228,7 +228,9 @@ foreach my $run ( @{fastestRuns(minMiles => 3, maxMiles => 6, numResults => 5)} 
 
 my $json = JSON->new()->pretty();
 
-my $output_filename = $FindBin::Bin . '/../webroot/data/fitness.json';
+my $data_dir = $FindBin::Bin . '/../webroot/data';
+-d $data_dir || mkdir $data_dir;
+my $output_filename = $data_dir . '/fitness.json';
 open my $output_file, '>', $output_filename or die "Can't open $output_filename: $!";
 print $output_file $json->encode($data);
 close $output_file;
