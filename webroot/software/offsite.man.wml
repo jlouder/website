@@ -1,6 +1,0 @@
-# $Id$
-#include <template.wml> topic="software"
-
-<title "Joel's software: offsite man page">
-
-<pod file=backup/offsite.pl />

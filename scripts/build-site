@@ -1,0 +1,16 @@
+#!/bin/bash -ex
+# Build and publish Joel's web site
+
+BRANCH=${BRANCH:-master}
+CHECKOUT_DIR=$( mktemp -d --tmpdir website.XXXXXXXXXX )
+trap "rm -rf $CHECKOUT_DIR" EXIT
+git clone -b $BRANCH --recurse-submodules \
+    https://github.com/jlouder/website.git \
+    $CHECKOUT_DIR
+
+$CHECKOUT_DIR/scripts/fitness-stats
+
+cd $CHECKOUT_DIR/webroot
+hugo -d $CHECKOUT_DIR/output
+
+rsync -a --delete $CHECKOUT_DIR/output/ /export/www

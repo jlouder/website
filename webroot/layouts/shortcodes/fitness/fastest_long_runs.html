@@ -1,0 +1,16 @@
+<table class="chart">
+<tr>
+  <th>Title</th>
+  <th>Date</th>
+  <th>Speed</th>
+  <th>Distance</th>
+</tr>
+{{ range .Site.Data.fitness.fastestLongRuns }}
+<tr>
+  <td><a href="{{ .link }}">{{ .name }}</a></td>
+  <td>{{ .date }}</td>
+  <td>{{ .speed }}</td>
+  <td>{{ .distance }}</td>
+</tr>
+{{ end }}
+</table>
