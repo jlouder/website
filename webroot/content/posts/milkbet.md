@@ -3,7 +3,7 @@ title: "The milk bet"
 date: 2001-10-17T17:00:00-04:00
 draft: false
 toc: false
-images: ["/images/milk1.jpg", "/images/milk2.jpg"]
+images: ["/images/milk1.jpg"]
 aliases:
   - /milk/
 tags:
