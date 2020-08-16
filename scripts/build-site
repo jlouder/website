@@ -1,6 +1,8 @@
 #!/bin/bash -ex
 # Build and publish Joel's web site
 
+PATH=/usr/local/bin:$PATH
+
 BRANCH=${BRANCH:-master}
 CHECKOUT_DIR=$( mktemp -d --tmpdir website.XXXXXXXXXX )
 trap "rm -rf $CHECKOUT_DIR" EXIT
