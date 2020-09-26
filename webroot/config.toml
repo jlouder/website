@@ -150,7 +150,12 @@ disableHugoGeneratorInject = false
     url        = "fitness/"
     weight     = 2
   [[menu.main]]
+    identifier = "gifts"
+    name       = "Gifts"
+    url        = "http://www.home.loudermilk.org/giftreg/"
+    weight     = 3
+  [[menu.main]]
     identifier = "posts"
     name       = "Posts"
     url        = "posts/"
-    weight     = 3
+    weight     = 4
