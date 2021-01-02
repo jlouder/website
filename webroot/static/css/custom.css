@@ -33,7 +33,7 @@ table.chart {
 }
 
 table.chart th {
-  text-align: center;
+  text-align: left;
   padding: 1px 2px 1px 2px;
   border-width: 1px;
   border-style: inset;
@@ -47,3 +47,35 @@ table.chart td {
   border-style: inset;
   border-color: gray;
 }
+
+/* Footnotes: */
+
+details.footnote {
+  display: inline;
+  position: relative;
+}
+
+/* hide details arrow */
+details.footnote > summary {
+  list-style: none;
+} /* firefox */
+details.footnote > summary::-webkit-details-marker {
+  display: none;
+} /* webkit */
+
+details.footnote > summary {
+  display: inline;
+  cursor: pointer;
+  vertical-align: super;
+  font-size: smaller;
+}
+
+details.footnote > .footnote-content {
+  position: absolute;
+  background: white;
+  border: 1px solid lightgray;
+  padding: 1em;
+  min-width: 40ch;
+  font-weight: normal;
+}
+

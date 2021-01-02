@@ -108,6 +108,25 @@ sub milesInYear {
   return sprintf("%0.2f", $total_miles);
 }
 
+# SUBROUTINE:  caloriesInYear($year)
+# DESCRIPTION: Returns the number of calories from all activities in a year.
+sub caloriesInYear {
+  my ($year) = @_;
+  my $activities = activities();
+  my $total_calories = 0;
+  foreach my $a ( @{$activities} ) {
+    my $activity_year = 1900 +
+     (localtime($a->{activity}->{beginTimestamp}/1000))[5];
+    next unless $activity_year == $year;
+
+    if( defined $a->{activity}->{calories} ) {
+      $total_calories += $a->{activity}->{calories};
+    }
+  }
+
+  return int($total_calories); # who cares about fractional calories?
+}
+
 # SUBROUTINE:  fastestRuns( minMiles => $min,
 #                           maxMiles => $max,
 #                           numResults => $num )
@@ -201,7 +220,8 @@ foreach my $year ( 2008 .. ((localtime(time))[5]+1900) ) {
   foreach my $activity_type (qw( Running Cycling Hiking )) {
     $stats->{$activity_type} = commify(milesInYear($year, $activity_type));
   }
-  push @{$data->{milesPerYear}}, $stats;
+  $stats->{Calories} = commify(caloriesInYear($year));
+  push @{$data->{totalsForYear}}, $stats;
 }
 
 # fastest long runs

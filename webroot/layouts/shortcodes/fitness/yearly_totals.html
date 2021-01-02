@@ -4,13 +4,23 @@
   <th>Miles Run</th>
   <th>Miles Biked</th>
   <th>Miles Hiked</th>
+  <th>Calories
+    <details class="footnote">
+      <summary>1</summary>
+      <div class="footnote-content">
+        For some reason, Garmin doesn't have calorie data for my manually-entered
+        treadmill runs until 2015.
+      </div>
+    </details>
+  </th>
 </tr>
-{{ range .Site.Data.fitness.milesPerYear }}
+{{ range .Site.Data.fitness.totalsForYear }}
 <tr>
   <td>{{ .Year }}</td>
   <td>{{ .Running }}</td>
   <td>{{ .Cycling }}</td>
   <td>{{ .Hiking }}</td>
+  <td>{{ .Calories }}</td>
 </tr>
 {{ end }}
 </table>
