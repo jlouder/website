@@ -22,17 +22,17 @@ pretty cheap, so why not upgrade and get something more modern?
 
 My requirements for the new camera were:
 
-* No cloud. I already have or can make the software to capture and show
+* **No cloud**. I already have or can make the software to capture and show
 stills and videos from the camera. Me watching images from the camera should
-involve me and the camera -- an no one else.
-* Better resolution. Just about any camera on the market currently should
+involve me and the camera -- and no one else.
+* **Better resolution**. Just about any camera on the market currently should
 do that.
-* A live view web interface that doesn't look horrible on mobile. Again,
+* **A web interface that doesn't look horrible on mobile**. Again,
 anything currently being sold should do that.
 
 ## Selecting a camera
 
-The "no cloud" was the hardest requirement to meet. There are tons of IP cameras
+"No cloud" was the hardest requirement to meet. There are tons of IP cameras
 out there, but for many it's hard to tell without buying the camera whether you
 can access images and video without connecting it to their cloud.
 
