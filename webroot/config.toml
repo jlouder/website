@@ -1,4 +1,4 @@
-baseURL = "http://www.loudermilk.org"
+baseURL = "https://www.loudermilk.org"
 title   = "Joel's web site"
 languageCode = "en-us"
 theme = "hello-friend-ng"
