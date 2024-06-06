@@ -30,7 +30,7 @@ this is the weekly schedule of food trucks in Estes Park for summer 2024.
 
 * The Barrel: [Johnny's Good Eatin'](https://www.johnnysgoodeatin.com/) 11a-8p
 * Rock Cut Brewing: [Mangia Mangia Pizzeria](https://www.mangiamangiapizzeria.com/) 12p-6p
-* Lumpy Ridge Brewing: Alpine Table
+* Lumpy Ridge Brewing: [EP Bross](https://www.facebook.com/people/EPBrossFt/100067158705880/)
 
 ## Friday
 
