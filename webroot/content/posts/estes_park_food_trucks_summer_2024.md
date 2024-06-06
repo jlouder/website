@@ -1,6 +1,7 @@
 ---
 title: "Estes Park Food Truck Schedule - Summer 2024"
 date: 2024-05-24T13:20:00-06:00
+lastmod: 2024-06-06T13:35:00-06:00
 draft: false
 toc: false
 tags:
