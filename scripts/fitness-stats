@@ -200,9 +200,18 @@ sub milesInCurrentShoes {
 
     $total_miles += $a->{activity}->{distance} / 1609.344;
 
+    # new shoes: stop counting, start at zero here
     last if (defined $a->{activity}->{description} &&
              $a->{activity}->{description}
                =~ /\bnew shoes\b/);
+
+    # "shoes=##.#": stop counting, start at the given mileage here
+    if (defined $a->{activity}->{description} &&
+        $a->{activity}->{description}
+          =~ /\bshoes\s*[=:]\s*([0-9.]+)/) {
+      $total_miles += $1;
+      last;
+    }
   }
 
   # Return a number with a reasonable precision
