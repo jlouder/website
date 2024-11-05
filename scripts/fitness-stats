@@ -177,38 +177,60 @@ sub fastestRuns {
   return \@fastestRuns;
 }
 
-# SUBROUTINE:  milesInCurrentShoes()
-# DESCRIPTION: Returns the number of miles run since the last 'new shoes' run,
-#              ignoring any 'old shoes' runs.
+# SUBROUTINE:  milesInCurrentShoes($activityType)
+# DESCRIPTION: Returns the number of miles since the last 'new shoes' activity,
+#              ignoring any 'old shoes' activities.
 sub milesInCurrentShoes {
+  my $activityType = $_[0];
   my $activities = activities();
   my $total_miles = 0;
+
+  my $activity_settings = {
+    running => {
+      typeId => 1,
+      oldShoesPattern => qr/\bold shoes\b/,
+      newShoesPattern => qr/\bnew shoes\b/,
+      resetMilesPattern => qr/\bshoes\s*[=:]\s*([0-9.]+)/,
+    },
+    hiking => {
+      typeId => 3,
+      oldShoesPattern => qr/\bold hiking shoes\b/,
+      newShoesPattern => qr/\bnew hiking shoes\b/,
+      resetMilesPattern => qr/\bhiking shoes\s*[=:]\s*([0-9.]+)/,
+    }
+  };
+
+  if (!defined $activity_settings->{$activityType}) {
+    die "unknown activity type: $activityType";
+  }
 
   # Sort the activities from most recent to least recent.
   foreach my $a ( sort {
                     $b->{activity}->{beginTimestamp} <=>
                     $a->{activity}->{beginTimestamp} }
                   @{$activities} ) {
-    # Count only running activities
-    next unless ($a->{activity}->{activityType}->{typeId} eq 1 or
-                 $a->{activity}->{activityType}->{parentTypeId} eq 1);
+    # Count only activities of the requested type
+    my $requestedTypeId = $activity_settings->{$activityType}->{typeId};
+    next unless ($a->{activity}->{activityType}->{typeId} eq $requestedTypeId or
+                 $a->{activity}->{activityType}->{parentTypeId} eq $requestedTypeId);
 
     # Don't count any runs in old shoes
     next if (defined $a->{activity}->{description} &&
              $a->{activity}->{description}
-               =~ /\bold shoes\b/);
+               =~ $activity_settings->{$activityType}->{oldShoesPattern});
 
+    # convert from meters
     $total_miles += $a->{activity}->{distance} / 1609.344;
 
     # new shoes: stop counting, start at zero here
     last if (defined $a->{activity}->{description} &&
              $a->{activity}->{description}
-               =~ /\bnew shoes\b/);
+               =~ $activity_settings->{$activityType}->{newShoesPattern});
 
     # "shoes=##.#": stop counting, start at the given mileage here
     if (defined $a->{activity}->{description} &&
         $a->{activity}->{description}
-          =~ /\bshoes\s*[=:]\s*([0-9.]+)/) {
+          =~ $activity_settings->{$activityType}->{resetMilesPattern}) {
       $total_miles += $1;
       last;
     }
@@ -220,7 +242,8 @@ sub milesInCurrentShoes {
 
 my $data = {};
 
-$data->{milesInCurrentShoes} = milesInCurrentShoes();
+$data->{milesInCurrentRunningShoes} = milesInCurrentShoes('running');
+$data->{milesInCurrentHikingShoes} = milesInCurrentShoes('hiking');
 
 # yearly totals
 foreach my $year ( 2008 .. ((localtime(time))[5]+1900) ) {

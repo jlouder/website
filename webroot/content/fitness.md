@@ -25,7 +25,9 @@ Since I run on smooth roads and treadmills, you can't tell from looking at a
 shoe's tread how worn it is. It will look like it has plenty of tread long
 after I have compressed all of the cushion out of the padding inside the shoe.
 
-I have run {{< fitness/miles_in_shoes >}} miles in my current shoes.
+I have run {{< fitness/miles_in_running_shoes >}} miles in my current running
+shoes. I have hiked {{< fitness/miles_in_hiking_shoes >}} miles in my
+current hiking shoes.
 
 I try to change shoes every 300-500 miles.
 
