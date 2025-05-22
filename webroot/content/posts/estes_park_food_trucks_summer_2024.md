@@ -7,6 +7,8 @@ toc: false
 tags:
   - untagged
 ---
+***Looking for the summer 2025 schedule? [It's right here.](/posts/2025/05/estes-park-food-truck-schedule-summer-2025/)***
+
 As best I can tell from searching the Internet and observing who is at which venue,
 this is the weekly schedule of food trucks in Estes Park for summer 2024.
 
