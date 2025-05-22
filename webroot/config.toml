@@ -36,9 +36,6 @@ disableHugoGeneratorInject = false
 [permalinks]
   posts = "/posts/:year/:month/:title/"
 
-[author]
-  name = "Joel Loudermilk"
-
 [blackfriday]
   hrefTargetBlank = true
 
@@ -51,6 +48,7 @@ disableHugoGeneratorInject = false
   series   = "series"
 
 [params]
+  author.name     = "Joel Loudermilk"
   dateform        = "Jan 2, 2006"
   dateformShort   = "Jan 2"
   dateformNum     = "2006-01-02"
