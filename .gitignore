@@ -1,3 +1,4 @@
 webroot/resources/
 webroot/public/
 webroot/data/
+.hugo_build.lock
