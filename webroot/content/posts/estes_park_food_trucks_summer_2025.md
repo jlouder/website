@@ -1,7 +1,7 @@
 ---
 title: "Estes Park Food Truck Schedule - Summer 2025"
 date: 2025-05-22T14:25:00-06:00
-lastmod: 2025-06-25T10:55:00-06:00
+lastmod: 2025-09-25T08:15:00-06:00
 draft: false
 toc: false
 tags:
@@ -36,8 +36,7 @@ this is the weekly schedule of food trucks in Estes Park for summer 2025.
 * Estes Park Lumber: [Mexico al Norte](https://www.facebook.com/p/M%C3%A9xico-al-Norte-61555625135350/) 8:30a-3p
 * Rock Cut Brewing: [Mangia Mangia Pizzeria](https://www.mangiamangiapizzeria.com/) 12p-7p
 * Avant Garde Aleworks: [Way Finder](https://wayfinderfoodtruck.com) 12p-7p
-* The Barrel: [La Cocina de Mamá](https://www.facebook.com/people/La-Cocina-de-Mam%C3%A1-Food-Truck/100057652381145/) 11a-7p
-* Estes Park Mountain Shop: [Johnny's Good Eatin'](https://www.johnnysgoodeatin.com/)
+* The Barrel: [Johnny's Good Eatin'](https://www.johnnysgoodeatin.com/) 11a-7p
 * Estes Park Visitor Center: [Street Noods](https://stnoods.com/) 8a-1p
 
 ## Friday
