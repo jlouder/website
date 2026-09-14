@@ -1,13 +1,20 @@
 {{ $src := .Get "src" }}
 {{ $original := .Page.Resources.GetMatch $src }}
-{{ $thumb := $original.Resize "400x" }}
+
+{{ $thumb := "" }}
+{{ if gt $original.Width $original.Height }}
+  {{ $thumb = $original.Resize "400x" }}
+{{ else }}
+  {{ $thumb = $original.Resize "x400" }}
+{{ end }}
+
 {{ $caption := .Get "caption" }}
 
 <figure class="{{ .Get "class" }}" style="margin-top: 0; margin-bottom: 0">
   <a href="{{ $original.RelPermalink }}">
-    <img src="{{ $thumb.RelPermalink }}" alt="{{ .Get "alt" }}">
+    <img src="{{ $thumb.RelPermalink }}" alt="{{ .Get "alt" }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}">
   </a>
   {{ with $caption }}
-    <figcaption><p>{{ . }}</p></figcaption>
+    <figcaption style="contain: inline-size; word-wrap: break-word"><p>{{ . }}</p></figcaption>
   {{ end }}
 </figure>
