@@ -8,7 +8,7 @@ tags:
   - untagged
 ---
 <figure style="float: right; margin-top: 0; margin-left: 1em; margin-bottom: 1em;">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Katy_Trail_State_Park_Missouri.svg/256px-Katy_Trail_State_Park_Missouri.svg.png"
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Katy_Trail_State_Park_Missouri.svg/250px-Katy_Trail_State_Park_Missouri.svg.png"
        style="border: 1px solid black;" />
   <figcaption style="text-align: center;" >
     The Katy Trail (<a href="https://commons.wikimedia.org/wiki/File:Katy_Trail_State_Park_Missouri.svg" title="via Wikimedia Commons">Kbh3rd</a> / <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA</a>)
