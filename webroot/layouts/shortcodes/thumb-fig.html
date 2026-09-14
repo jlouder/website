@@ -1,0 +1,13 @@
+{{ $src := .Get "src" }}
+{{ $original := .Page.Resources.GetMatch $src }}
+{{ $thumb := $original.Resize "400x" }}
+{{ $caption := .Get "caption" }}
+
+<figure class="{{ .Get "class" }}" style="margin-top: 0; margin-bottom: 0">
+  <a href="{{ $original.RelPermalink }}">
+    <img src="{{ $thumb.RelPermalink }}" alt="{{ .Get "alt" }}">
+  </a>
+  {{ with $caption }}
+    <figcaption><p>{{ . }}</p></figcaption>
+  {{ end }}
+</figure>
