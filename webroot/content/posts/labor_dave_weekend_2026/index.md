@@ -3,6 +3,7 @@ title: "Labor Dave Weekend 2026"
 date: 2026-09-13T16:00:00-06:00
 lastmod: 2026-09-13T16:00:00-06:00
 draft: false
+images: ['gorge_seats.jpg']
 toc: true
 tags:
   - van
