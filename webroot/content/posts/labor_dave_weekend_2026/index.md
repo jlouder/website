@@ -8,6 +8,9 @@ tags:
   - van
 ---
 
+I've always wanted to see Dave Matthews Band live, so when dates for this summer's
+tour were announced earlier this year, we decided to go to the Denver show.
+
 {{<thumb-fig
 src="van.jpg"
 alt="Our van"
@@ -15,9 +18,6 @@ link="van.jpg"
 caption="Our van!"
 class="right-floated"
 >}}
-
-I've always wanted to see Dave Matthews Band live, so when dates for this summer's
-tour were announced earlier this year, we decided to go to the Denver show.
 
 And just before the on-sale date, we got the crazy idea to also buy tickets to see
 them at The Gorge Amphitheater in Washington State. We'd drive our self-built
@@ -77,7 +77,7 @@ caption="Campground at Craters of the Moon National Monument"
 class="right-floated"
 >}}
 
-We made our way to [Craters of the Moon National Monument](https://www.nps.gov/crmo/index.htm)
+We made our way to Craters of the Moon National Monument
 in Idaho. This was a great example of what we had in mind when we built the van.
 We'd probably never think of visiting this place if we were taking a trip in a car,
 staying in hotels, because there's not really anything around. But with the van,
@@ -199,13 +199,13 @@ to our hotel until quite late. That was one way to rationalize a hotel.
 We had dinner at a winery's tasting room, did our laundry back at the hotel,
 and had a nice leisurely evening.
 
-### Sunday September 6
+### Sunday September 6 (concert day!)
 
 {{<thumb-fig
 src="gorge_parking.jpg"
 alt="Parking at The Gorge"
 link="gorge_parking.jpg"
-caption="Yes, it's wine in a box. Cut me some slack, we're in a parking lot."
+caption="Wine in a box. Only the finest for parking-lot drinking."
 class="right-floated"
 >}}
 
@@ -356,7 +356,7 @@ of those drive-through coffee huts. I want to mention this one specifically --
 -- because their breakfast burrito was fantastic!
 
 Later in our drive, the van's check engine light came on after we hit a bump
-in the road. Our van is pretty old (it's a 2010), but it's low miles, and a particularly
+in the road. Our van is pretty old (it's a 2010), but it's low miles, and a 
 reliable year and engine, which went into our decision to buy this particular
 van. So we were a little concerned. We were an hour-ish from Missoula, Montana,
 and Michele was able to call around and find a mechanic who could fit us in.
@@ -365,15 +365,92 @@ Amazingly, Shane at Honesty Auto in Missoula had us back on the road probably an
 after we arrived. The connection on the oxygen sensor had come loose, that's all.
 I didn't know how serious the issue was, but Shane gave us a tip -- usually if the
 check engine light isn't flashing, and you don't have any driveability problems,
-you're good to drive and get it checked out later.
+you're good to drive and get it checked out later. Good to know!
 
+We then had a late lunch in Missoula, and drove a bit further to spend the night
+at a free Forest Service site near Butte, Montana.
 
+### Wednesday September 9
 
+{{<thumb-fig
+src="yellowstone.jpg"
+alt="A quick stop in Yellowstone National Park"
+link="yellowstone.jpg"
+caption="A quick stop in Yellowstone National Park"
+class="right-floated"
+>}}
 
-## Things we learned
+We started the day driving along the Gallatin River in southern Montana. That
+stretch of road (US 191) was particularly scenic. There were countless puloffs
+right next to the river, so we stopped and had lunch at one.
 
-Idaho is quite beautiful. I guess I was just expecting potatoes. (They definitely
-have potatoes, but they also have lots of other things.)
+Our route was going to take us right through Yellowstone National Park.
+Unfortunately, we were going to miss Old Faithful by maybe 10 minutes. But
+there are lots of geysers and pools in Yellowstone, so we stopped at [Fountain
+Paint Pot
+Trail](https://www.nps.gov/thingstodo/yell-fountain-paint-pot-trail.htm) to
+walk along the boardwalk and see some of them. I hadn't been to Yellowstone
+since I was a kid, and while this wasn't really a visit so much as a
+drive-through, it was really nice to see.
+
+We ended the day in Moran, Wyoming, at a Forest Service campground just outside
+Grand Teton National Park. The campground is right next door to a tiny
+[resort](https://hatchetresort.com/) with its own restaurant and bar, so we
+were able to walk over and enjoy a beer. I can't think of any other Forest
+Service campground where you can do that!
+
+### Thursday September 10
+
+{{<thumb-fig
+src="rock_springs.jpg"
+alt="Visiting Square State Brewing in Rock Springs, Wyoming"
+link="rock_springs.jpg"
+caption="Visiting Square State Brewing in Rock Springs, Wyoming"
+class="right-floated"
+>}}
+
+We again decided not to cook breakfast in the van, and drove on to the small town
+of Dubois, Wyoming and had breakfast at Village Cafe. We were craving a diner,
+and it was exactly what we were looking for -- a big breakfast, and endless coffee
+in thick brown mugs. As we were checking out, the watiress told me "I'm glad you
+didn't come by tomorrow" and went on to explain that the following day, the entire
+town (of about 1,000 people) would be without power all day for some electrical
+system maintenance.
+
+From there, we drove to Rock Springs, Wyoming where we decided to get a hotel for the
+night. This would be our last night of the trip. We got some groceries as a head start on
+the first few days at home post-trip, found a local brewery (of course!), and had dinner
+at a Mexican restaurant and then had ourselves another leisurely hotel evening.
+
+### Friday September 11
+
+{{<thumb-fig
+src="tie_siding.jpg"
+alt="Taking a break from windy driving in the \"town\" of Tie Siding, Wyoming"
+link="tie_siding.jpg"
+caption="Taking a break from windy driving in the \"town\" of Tie Siding, Wyoming"
+class="right-floated"
+>}}
+
+Rock Springs, where we ended the previous day, is very close to where we stayed
+on the very first night of the trip. So to finish the trip today, we'd basically
+be doing the first day's drive in the opposite direction.
+
+Unlike the first day of the trip, though, today the drive on I-80 was very windy.
+I've since learned that this part of Wyoming is frequently windy, and even
+that "windy" in Wyoming might mean incredibly windy. There were signs on the Interstate
+saying that you shouldn't be driving today if you have a tall camper, which we don't,
+and I could see why. Even with our standard-height van I could feel the wind
+gusts pushing us around.
+
+We traded off driving because it was strenuous and stressful, and we took frequent
+breaks, just pulling off at a rest stop or an exit (like the one in this picture).
+What Google said should be a five hour drive took us about seven and a half hours,
+but we eventually made it home to Estes Park. This was definitely the most
+difficult day of driving the van, so it was great to not have to get up the next
+day and drive some more.
+
+## Things we learned (in no particular order)
 
 We planned more days than we needed to get to Washington, and could have used
 one or two more days for the trip back. We had to pick our trip dates pretty far in
@@ -382,3 +459,21 @@ done a little route planning before settling on them.
 
 For us, the ideal time for a hotel night would be after three or maybe four
 nights in the van. That would keep us from getting worn out from the van routine.
+
+We thought we'd use Harvest Host a lot to find places to stay, but we only used
+it one time, and that was a bit underwhelming. Maybe we'll use it more in the
+future, we'll have to see.
+
+We brought along some portable solar panels, which were a free gift with the power
+station we bought, because we weren't sure how our power needs would go. But with
+the solar panels and the alternator charger, plus our system having 9kWh of battery,
+we never touched them. In fact, the battery never got lower than 75%.
+
+If I went to The Gorge again to see Dave Matthews Band, I'd make some stickers
+or something to give people. And I'd also pay for some upgraded parking. What
+you're really paying for is making it easier to get out after the concert.
+
+Idaho is quite beautiful. I guess I was just expecting potatoes. (They definitely
+have potatoes, but they also have lots of other things.)
+
+
