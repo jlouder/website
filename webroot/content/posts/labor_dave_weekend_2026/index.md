@@ -382,7 +382,7 @@ class="right-floated"
 >}}
 
 We started the day driving along the Gallatin River in southern Montana. That
-stretch of road (US 191) was particularly scenic. There were countless puloffs
+stretch of road (US 191) was particularly scenic. There were countless pulloffs
 right next to the river, so we stopped and had lunch at one.
 
 Our route was going to take us right through Yellowstone National Park.
